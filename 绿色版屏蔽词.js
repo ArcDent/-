@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.1
+// @version      1.2
 // @updateURL    https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
 // @downloadURL  https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
 // @match        https://3dtank.com/play/
