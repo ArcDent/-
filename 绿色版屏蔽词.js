@@ -1,5 +1,8 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
+// @version      1.1
+// @updateURL    https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
+// @downloadURL  https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
 // @match        https://3dtank.com/play/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // ==/UserScript==
@@ -467,6 +470,8 @@
             target.value = target.value.replace(/\u738b\u4f1f/g, '\u738b‎\u4f1f');
             target.value = target.value.replace(/\u84c4/g, '\u7a38');
             target.value = target.value.replace(/\u5420/g, '\u754e');
+            target.value = target.value.replace(/\u96c6\u5408/g, '\u96c6‎\u5408');
+            target.value = target.value.replace(/\u4e2d\u90fd/g, '\u4e2d‎\u90fd');
 
             //emoji
             target.value = target.value.replace(/\u002f\u8036/g, '✌');
