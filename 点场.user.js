@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         点场
-// @version      1
+// @version      1.0.0
 // @description  Supplies Clicker
-// @author       Arc
+// @author       XiaoYu
+// @updateURL    
+// @downloadURL  
 // @match        https://*.tankionline.com/*
 // @match        https://3dtank.com/play/
 // @match        https://*.3dtank.com/*
