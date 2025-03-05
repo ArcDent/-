@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
 // @version      1.0.2
-// @updateURL    https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
-// @downloadURL  https://github.com/ArcDent/-/blob/main/%E7%BB%BF%E8%89%B2%E7%89%88%E5%B1%8F%E8%94%BD%E8%AF%8D.js
+// @downloadURL    https://raw.githubusercontent.com/ArcDent/-/main/%E7%BB%BF%E8%89%B2%E7%89%B9%E4%BE%9B%E5%B1%8F%E8%94%BD%E8%AF%8D.user.jsjs
+// @updateURL    https://raw.githubusercontent.com/ArcDent/-/main/%E7%BB%BF%E8%89%B2%E7%89%B9%E4%BE%9B%E5%B1%8F%E8%94%BD%E8%AF%8D.user.js
 // @match        https://3dtank.com/play/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // ==/UserScript==
