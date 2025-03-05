@@ -472,6 +472,16 @@
             target.value = target.value.replace(/\u5420/g, '\u754e');
             target.value = target.value.replace(/\u96c6\u5408/g, '\u96c6‎\u5408');
             target.value = target.value.replace(/\u4e2d\u90fd/g, '\u4e2d‎\u90fd');
+            target.value = target.value.replace(/\u78a7/g, '\u924d');
+            target.value = target.value.replace(/\u7115/g, '\u6853');
+            target.value = target.value.replace(/\u63d0\u70bc/g, '\u63d0‎\u70bc');
+            target.value = target.value.replace(/\u865a\u7a7a/g, '\u865a‎\u7a7a');
+            target.value = target.value.replace(/\u7a7a\u4e2d/g, '\u7a7a‎\u4e2d');
+            target.value = target.value.replace(/\u7f6a\u6076/g, '\u7f6a‎\u6076');
+            target.value = target.value.replace(/\u7231\u6b32/g, '\u7231‎\u6b32');
+            target.value = target.value.replace(/\u0034/g, '\u9a77');
+            target.value = target.value.replace(/\u0033/g, '\u53c1');
+            
 
             //emoji
             target.value = target.value.replace(/\u002f\u8036/g, '✌');
