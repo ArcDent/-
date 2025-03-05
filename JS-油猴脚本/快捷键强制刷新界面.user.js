@@ -2,8 +2,8 @@
 // @name         快捷键刷新页面
 // @namespace    http://tampermonkey.net/
 // @version      1.0.1
-// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/快捷键强制刷新界面.user.js
-// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/快捷键强制刷新界面.user.js
+// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/快捷键强制刷新界面.user.js
+// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/快捷键强制刷新界面.user.js
 // @description  按下 F2 键刷新当前页面（极速优化版）
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // @author       Arc

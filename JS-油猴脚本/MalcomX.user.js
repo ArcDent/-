@@ -4,8 +4,8 @@
 // @description  You can edit this script to make your own version/updates
 // @author       Arc
 // @version      2.0.3
-// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/MalcomX.user.js
-// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/MalcomX.user.js
+// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/MalcomX.user.js
+// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/MalcomX.user.js
 // @match        https://tankionline.com/play*
 // @match        https://*.tankionline.com/*
 // @match        https://3dtank.com/play*
