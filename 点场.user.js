@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         点场
-// @version      1.0.0
+// @version      1.0.1
 // @description  Supplies Clicker
 // @author       XiaoYu
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/点场.user.js
