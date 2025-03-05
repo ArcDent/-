@@ -3,6 +3,8 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0.1
 // @description  将字符转换为Unicode转义序列并附加控制符标记
+// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/Unicode转义序列.user.js
+// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/Unicode转义序列.user.js
 // @author       Arc
 // @match        *://*/*
 // @grant        none
