@@ -3,8 +3,8 @@
 // @version      1.0.0
 // @description  Supplies Clicker
 // @author       XiaoYu
-// @updateURL    
-// @downloadURL  
+// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/点场.user.js
+// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/点场.user.js
 // @match        https://*.tankionline.com/*
 // @match        https://3dtank.com/play/
 // @match        https://*.3dtank.com/*
