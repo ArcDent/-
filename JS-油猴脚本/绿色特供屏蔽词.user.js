@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.0.7
+// @version      1.0.8
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @match        https://3dtank.com/play/
@@ -30,7 +30,6 @@
             target.value = target.value.replace(/\u51fa/g, '\u5c80');
             target.value = target.value.replace(/\u53f7/g, '\u547a');
             target.value = target.value.replace(/\u5e9f/g, '\u8153');
-            target.value = target.value.replace(/\u670d/g, '\u798f');
             target.value = target.value.replace(/\u5e72/g, '\u6746');
             target.value = target.value.replace(/\u54ed\u4e48/g, '\u54ed‎\u4e48');
             target.value = target.value.replace(/\u6eda/g, '\u6efe');
@@ -487,7 +486,17 @@
             target.value = target.value.replace(/\u95f4\u6216/g, '\u95f4‎\u6216');
             target.value = target.value.replace(/\u5343\u5e74/g, '\u5343‎\u5e74');
             target.value = target.value.replace(/\u4f1f\u4eba/g, '\u4f1f‎\u4eba');
-
+            target.value = target.value.replace(/\u957f\u8005/g, '\u957f‎\u8005');
+            target.value = target.value.replace(/\u4e0d\u7f3a\u94b1/g, '\u4e0d‎\u7f3a‎\u94b1');
+            target.value = target.value.replace(/\u9999\u70df/g, '\u9999‎\u70df');
+            target.value = target.value.replace(/\u4e00\u6c27\u5316\u78b3/g, '\u4e00‎\u6c27\u5316\u78b3');
+            target.value = target.value.replace(/\u670d/g, '\u83d4');
+            target.value = target.value.replace(/\u95ee\u9053/g, '\u95ee‎\u9053');
+            target.value = target.value.replace(/\u76f4\u4f9b/g, '\u76f4‎\u4f9b');
+            target.value = target.value.replace(/\u5c0f\u59d0/g, '\u5c0f‎\u59d0');
+            target.value = target.value.replace(/\u59d0\u59d0/g, '\u59d0‎\u59d0');
+            target.value = target.value.replace(/\u80a1\u7968/g, '\u80a1‎\u7968');
+            target.value = target.value.replace(/\u59b9\u59b9/g, '\u59b9‎\u59b9');
 
             /*
             数字部分
