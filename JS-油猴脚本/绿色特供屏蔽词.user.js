@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.1.6
+// @version      1.1.7
 // @author       Arc
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -511,7 +511,19 @@
             target.value = target.value.replace(/\u5965\u8fd0/g, '\u5965‎\u8fd0');
             target.value = target.value.replace(/\u8bba\u529f/g, '\u8bba‎\u529f'); 
             target.value = target.value.replace(/\u56fd\u826f/g, '\u56fd‎\u826f');
-
+            target.value = target.value.replace(/\u52a9\u7406/g, '\u52a9‎\u7406');
+            target.value = target.value.replace(/\u8054\u5408\u56fd/g, '\u8054‎\u5408‎\u56fd');
+            target.value = target.value.replace(/\u653f\u6cbb/g, '\u653f‎\u6cbb');
+            target.value = target.value.replace(/\u69fd/g, '\u6fa1');
+            target.value = target.value.replace(/\u5d3d/g, '\u5407');
+            target.value = target.value.replace(/\u7956\u575f/g, '\u7956‎\u575f');
+            target.value = target.value.replace(/\u5305\u90ae/g, '\u5305‎\u90ae');
+            target.value = target.value.replace(/\u9ad8\u6f6e/g, '\u9ad8‎\u6f6e');
+            target.value = target.value.replace(/\u5ad6/g, '\u7968');
+            target.value = target.value.replace(/\u6cfb\u836f/g, '\u6cfb‎\u836f');
+            target.value = target.value.replace(/\u0030\u3002/g, '\u0030‎\u3002');
+            target.value = target.value.replace(/\u6c2f/g, '\u7eff');
+            target.value = target.value.replace(/\u914d\u65b9/g, '\u914d‎\u65b9');
 
             /*
             数字部分
