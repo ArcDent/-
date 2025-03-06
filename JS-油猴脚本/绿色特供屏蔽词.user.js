@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.1.1
+// @version      1.1.2
 // @author       Arc
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -739,7 +739,7 @@
     setInterval(checkAndClickButtons, 1);
 })();
 
-//美化表情UI以及大厅表情按钮
+//大厅表情UI及美化
 (function () {
     'use strict';
 
@@ -788,8 +788,8 @@
                 button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
             });
 
-             // 点击效果
-             button.addEventListener('mousedown', function () {
+            // 点击效果
+            button.addEventListener('mousedown', function () {
                 button.style.transform = 'scale(1)';
             });
             button.addEventListener('mouseup', function () {
@@ -820,6 +820,7 @@
             buttonAdded = false;
         }
     }
+
     // 定义一个函数来切换 emoji 选择器的显示和隐藏
     function toggleEmojiPicker() {
         if (isEmojiPickerVisible) {
@@ -855,6 +856,7 @@
             emojiPicker = document.createElement('div');
             // 给 emojiPicker 添加唯一 ID
             emojiPicker.id = 'custom-emoji-picker';
+
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes gradientAnimation {
@@ -897,7 +899,8 @@
                     background: rgba(255, 255, 255, 0.2);
                     border-radius: 4px;
                 }
-                  #custom-emoji-picker::-webkit-scrollbar-thumb {
+
+                #custom-emoji-picker::-webkit-scrollbar-thumb {
                     background: rgba(255, 255, 255, 0.5);
                     border-radius: 4px;
                 }
@@ -913,6 +916,7 @@
                 }
             `;
             document.head.appendChild(style);
+
             uniqueEmojiList.forEach(emoji => {
                 const emojiSpan = document.createElement('span');
                 emojiSpan.textContent = emoji;
@@ -925,8 +929,8 @@
         }
 
         // 这里可以直接修改 left 和 top 的固定值
-        const fixedLeft = 1700; // 你可以根据需要修改这个值
-        const fixedTop = 821; // 你可以根据需要修改这个值
+        const fixedLeft = 1510; // 你可以根据需要修改这个值
+        const fixedTop = 890; // 你可以根据需要修改这个值
 
         emojiPicker.style.left = fixedLeft + 'px';
         emojiPicker.style.top = fixedTop + 'px';
@@ -934,6 +938,7 @@
         document.body.appendChild(emojiPicker);
         isEmojiPickerVisible = true;
     }
+
     // 定义一个函数来隐藏 emoji 选择器
     function hideEmojiPicker() {
         if (emojiPicker) {
@@ -960,15 +965,16 @@
             }
         }
     });
-     // 配置观察选项
-     const config = { childList: true, subtree: true };
 
-     // 开始观察整个文档的变化
-     observer.observe(document.body, config);
- 
-     // 初始检查，以防元素在观察开始前就已经存在
-     addButtonIfTargetExists();
- })();
+    // 配置观察选项
+    const config = { childList: true, subtree: true };
+
+    // 开始观察整个文档的变化
+    observer.observe(document.body, config);
+
+    // 初始检查，以防元素在观察开始前就已经存在
+    addButtonIfTargetExists();
+})();
 
 
 
