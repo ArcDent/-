@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.0.5
+// @version      1.0.6
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @match        https://3dtank.com/play/
@@ -480,12 +480,24 @@
             target.value = target.value.replace(/\u7a7a\u4e2d/g, '\u7a7a‎\u4e2d');
             target.value = target.value.replace(/\u7f6a\u6076/g, '\u7f6a‎\u6076');
             target.value = target.value.replace(/\u7231\u6b32/g, '\u7231‎\u6b32');
+            target.value = target.value.replace(/\u4e49\u89e3/g, '\u4e49‎\u89e3');
+            target.value = target.value.replace(/\u4fe1\u4ef0/g, '\u4fe1‎\u4ef0');
+            target.value = target.value.replace(/\u9769\u547d/g, '\u9769‎\u547d');
+            target.value = target.value.replace(/\u8036\u7a23/g, '\u8036‎\u7a23');
+            target.value = target.value.replace(/\u95f4\u6216/g, '\u95f4‎\u6216');
+            target.value = target.value.replace(/\u5343\u5e74/g, '\u5343‎\u5e74');
+
+            /*
+            数字部分
             target.value = target.value.replace(/\u0034/g, '\u9a77');
             target.value = target.value.replace(/\u0033/g, '\u53c1');
             target.value = target.value.replace(/\u0036\u0039/g, '\u0036‎\u0039');
             target.value = target.value.replace(/\u0037\u0035/g, '\u0037‎\u0035');
             target.value = target.value.replace(/\u0038\u0039/g, '\u0038‎\u0039');
-            target.value = target.value.replace(/\u0073\u0062/g, '\u503d\u5421');
+            */
+
+            /*
+            字母部分
             target.value = target.value.replace(/\u0062/g, '\u5421');
             target.value = target.value.replace(/\u0063/g, '\u6fa1');
             target.value = target.value.replace(/\u006e\u006d/g, '\u4f60\u51af');
@@ -494,6 +506,9 @@
             target.value = target.value.replace(/\u0073/g, '\u8bf6\u9a77');
             target.value = target.value.replace(/\u0077/g, '\u8fbe\u4e0d\u905b');
             target.value = target.value.replace(/\u0079/g, '\u8fef');
+            target.value = target.value.replace(/\u006d\u006e/g, '\u006d‎\u006e');
+            target.value = target.value.replace(/\u0073\u0062/g, '\u503d\u5421');
+            */
 
             //emoji
             target.value = target.value.replace(/\u002f\u8036/g, '✌');
