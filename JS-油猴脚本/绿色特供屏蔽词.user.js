@@ -472,6 +472,7 @@
             target.value = target.value.replace(/\u5420/g, '\u754e');
             target.value = target.value.replace(/\u96c6\u5408/g, '\u96c6‎\u5408');
             target.value = target.value.replace(/\u4e2d\u90fd/g, '\u4e2d‎\u90fd');
+            //下面为自行添加部分
             target.value = target.value.replace(/\u78a7/g, '\u924d');
             target.value = target.value.replace(/\u7115/g, '\u6853');
             target.value = target.value.replace(/\u63d0\u70bc/g, '\u63d0‎\u70bc');
@@ -481,7 +482,15 @@
             target.value = target.value.replace(/\u7231\u6b32/g, '\u7231‎\u6b32');
             target.value = target.value.replace(/\u0034/g, '\u9a77');
             target.value = target.value.replace(/\u0033/g, '\u53c1');
-            
+            target.value = target.value.replace(/\u0036\u0039/g, '\u0036‎\u0039');
+            target.value = target.value.replace(/\u0037\u0035/g, '\u0037‎\u0035');
+            target.value = target.value.replace(/\u0038\u0039/g, '\u0038‎\u0039');
+            target.value = target.value.replace(/\u0073\u0062/g, '\u503d\u5421');
+            target.value = target.value.replace(/\u0062/g, '\u5421');
+            target.value = target.value.replace(/\u0063/g, '\u6fa1');
+            target.value = target.value.replace(/\u006e\u006d/g, '\u4f60\u51af');
+            target.value = target.value.replace(/\u0073\u5421/g, '\u503d\u5421');
+            target.value = target.value.replace(/\u0066/g, '\u8bf6\u8d1f');
 
             //emoji
             target.value = target.value.replace(/\u002f\u8036/g, '✌');
