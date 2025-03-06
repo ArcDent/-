@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.1.0
+// @version      1.1.1
 // @author       Arc
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -738,5 +738,238 @@
 
     setInterval(checkAndClickButtons, 1);
 })();
+
+//美化表情UI以及大厅表情按钮
+(function () {
+    'use strict';
+
+    // 定义一个标志变量，用于判断按钮是否已经添加
+    let buttonAdded = false;
+    // 定义一个变量存储目标输入框
+    let targetInput;
+    // 定义一个变量存储 emoji 选择器
+    let emojiPicker;
+    // 定义一个标志变量，用于判断 emoji 选择器是否显示
+    let isEmojiPickerVisible = false;
+    // 存储按钮元素
+    let button;
+
+    // 定义一个函数来查找目标元素并添加按钮
+    function addButtonIfTargetExists() {
+        targetInput = document.querySelector('#root > div.ChatComponentStyle-chatWindow > div[class^="ksc-"] > input[type=text]');
+
+        if (targetInput && !buttonAdded) {
+            // 创建按钮元素
+            button = document.createElement('button');
+            // 使用 emoji 作为按钮图标
+            button.innerHTML = '😀 ';
+
+            // 设置按钮的样式
+            button.style.marginLeft = '10px';
+            button.style.padding = '10px 20px';
+            button.style.fontSize = '16px';
+            button.style.fontWeight = '600';
+            button.style.color = '#fff';
+            button.style.border = 'none';
+            button.style.borderRadius = 'px'; // 这里应该有具体数值，比如 '4px'
+            button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            button.style.cursor = 'pointer';
+            button.style.transition = 'all 0.3s ease';
+            // 设置按钮的渐变背景和动画
+            button.style.background = 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
+            button.style.backgroundSize = '400% 400%';
+            button.style.animation = 'gradientAnimation 15s ease infinite';
+
+            // 悬停效果
+            button.addEventListener('mouseover', function () {
+                button.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
+            });
+            button.addEventListener('mouseout', function () {
+                button.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+
+             // 点击效果
+             button.addEventListener('mousedown', function () {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseup', function () {
+                button.style.transform = 'scale(1)';
+            });
+
+            // 将按钮插入到目标元素的右侧
+            targetInput.parentNode.insertBefore(button, targetInput.nextSibling);
+
+            // 为按钮添加点击事件监听器
+            button.addEventListener('click', function () {
+                toggleEmojiPicker();
+                targetInput.focus(); // 使输入框处于选中状态
+            });
+
+            // 设置标志变量为 true，表示按钮已经添加
+            buttonAdded = true;
+        } else if (!targetInput && buttonAdded) {
+            // 如果目标输入框消失且按钮已添加，移除按钮并重置标志
+            if (button) {
+                button.remove();
+                button = null;
+            }
+            // 隐藏 emoji 选择器
+            if (isEmojiPickerVisible) {
+                hideEmojiPicker();
+            }
+            buttonAdded = false;
+        }
+    }
+    // 定义一个函数来切换 emoji 选择器的显示和隐藏
+    function toggleEmojiPicker() {
+        if (isEmojiPickerVisible) {
+            hideEmojiPicker();
+        } else {
+            showEmojiPicker();
+        }
+    }
+
+    // 定义一个函数来显示 emoji 选择器
+    function showEmojiPicker() {
+        const emojiList = [
+            '✌ ', ' ☢ ', '☣', '❄', '✋', '⭐', '⚡', '⚽', '⛹️', '☝',
+            '😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇',
+            '🙂', '🙃', '😉', '😌', '😍', '🥰', '😘', '😗', '😙', '😚',
+            '😋', '😛', '😝', '😜', '🤪', '🤨', '🧐', '🤓', '😎', '✊',
+            '🤩', '🥳', '😏', '😒', '😞', '😔', '😟', '😢', '😭', '😩',
+            '😫', '🥺', '😣', '😖', '😤', '😡', '😠', '🤬', '🤯', '😳',
+            '🥵', '🥶', '😱', '😨', '😰', '😥', '😓', '🤗', '🤔', '🤭',
+            '🤫', '🤥', '😶', '😐', '😑', '😬', '🙄', '😯', '😦', '😧',
+            '😮', '😲', '🥱', '😴', '🤤', '😪', '😵', '🤐', '🥴', '🤢',
+            '🤮', '🤧', '😷', '🤒', '🤕', '🤑', '🤠', '😈', '👿', '👹',
+            '👺', '🤡', '💩', '👻', '💀', '☠️', '👽', '👾', '🤖', '🎃',
+            '✍', '♿', '☺️', '☹️', '✊', '☕', '⛪', '⚓', '⛵', '⏳',
+            '✈', '☔', '⛄', '⚾', '✨', '⌨', '☎', '✂', '⛏', '♻',
+            '✌ ', ' ☢ ', '☣', '❄', '✋', '⭐', '⚡', '⚽', '⛹️', '☝'
+        ];
+
+        // 去重
+        const uniqueEmojiList = [...new Set(emojiList)];
+
+        if (!emojiPicker) {
+            emojiPicker = document.createElement('div');
+            // 给 emojiPicker 添加唯一 ID
+            emojiPicker.id = 'custom-emoji-picker';
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes gradientAnimation {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+
+                #custom-emoji-picker {
+                    box-sizing: border-box;
+                    position: absolute;
+                    border: 1px solid #ccc;
+                    padding: 4px;
+                    z-index: 1000;
+                    max-height: 90px;
+                    overflow-y: auto;
+                    width: 200px;
+                    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    background-size: 400% 400%;
+                    animation: gradientAnimation 15s ease infinite;
+                }
+
+                #custom-emoji-picker span {
+                    cursor: pointer;
+                    padding: 3px;
+                }
+
+                /* 自定义滚动条样式 */
+                #custom-emoji-picker::-webkit-scrollbar {
+                    width: 8px;
+                }
+
+                #custom-emoji-picker::-webkit-scrollbar-track {
+                    background: rgba(255, 255, 255, 0.2);
+                    border-radius: 4px;
+                }
+                  #custom-emoji-picker::-webkit-scrollbar-thumb {
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 4px;
+                }
+
+                #custom-emoji-picker::-webkit-scrollbar-thumb:hover {
+                    background: rgba(255, 255, 255, 0.7);
+                }
+
+                /* 兼容 Firefox */
+                #custom-emoji-picker {
+                    scrollbar-width: thin;
+                    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.2);
+                }
+            `;
+            document.head.appendChild(style);
+            uniqueEmojiList.forEach(emoji => {
+                const emojiSpan = document.createElement('span');
+                emojiSpan.textContent = emoji;
+                emojiSpan.addEventListener('click', function () {
+                    insertEmojiIntoInput(emoji);
+                    hideEmojiPicker(); // 插入 emoji 后隐藏选择器
+                });
+                emojiPicker.appendChild(emojiSpan);
+            });
+        }
+
+        // 这里可以直接修改 left 和 top 的固定值
+        const fixedLeft = 1700; // 你可以根据需要修改这个值
+        const fixedTop = 821; // 你可以根据需要修改这个值
+
+        emojiPicker.style.left = fixedLeft + 'px';
+        emojiPicker.style.top = fixedTop + 'px';
+
+        document.body.appendChild(emojiPicker);
+        isEmojiPickerVisible = true;
+    }
+    // 定义一个函数来隐藏 emoji 选择器
+    function hideEmojiPicker() {
+        if (emojiPicker) {
+            emojiPicker.remove();
+            isEmojiPickerVisible = false;
+        }
+    }
+
+    // 定义一个函数来将 emoji 插入到输入框中
+    function insertEmojiIntoInput(emoji) {
+        const startPos = targetInput.selectionStart;
+        const endPos = targetInput.selectionEnd;
+        const currentValue = targetInput.value;
+        targetInput.value = currentValue.slice(0, startPos) + emoji + currentValue.slice(endPos);
+        targetInput.selectionStart = targetInput.selectionEnd = startPos + emoji.length;
+        targetInput.focus();
+    }
+
+    // 创建一个 MutationObserver 实例
+    const observer = new MutationObserver(function (mutationsList) {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                addButtonIfTargetExists();
+            }
+        }
+    });
+     // 配置观察选项
+     const config = { childList: true, subtree: true };
+
+     // 开始观察整个文档的变化
+     observer.observe(document.body, config);
+ 
+     // 初始检查，以防元素在观察开始前就已经存在
+     addButtonIfTargetExists();
+ })();
+
+
 
 
