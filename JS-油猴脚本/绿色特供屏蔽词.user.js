@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.1.2
+// @version      1.1.3
 // @author       Arc
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -930,7 +930,7 @@
 
         // 这里可以直接修改 left 和 top 的固定值
         const fixedLeft = 1510; // 你可以根据需要修改这个值
-        const fixedTop = 890; // 你可以根据需要修改这个值
+        const fixedTop = 900; // 你可以根据需要修改这个值
 
         emojiPicker.style.left = fixedLeft + 'px';
         emojiPicker.style.top = fixedTop + 'px';
