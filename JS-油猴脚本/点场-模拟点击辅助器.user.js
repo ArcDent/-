@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         点场
-// @version      1.0.1
+// @version      1.0.2
 // @description  Supplies Clicker
 // @author       XiaoYu
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/点场-模拟点击辅助器.user.js
@@ -8,6 +8,7 @@
 // @match        https://*.tankionline.com/*
 // @match        https://3dtank.com/play/
 // @match        https://*.3dtank.com/*
+// @match        https://game.4399iw2.com/yxtk/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // @grant        none
 // ==/UserScript==
