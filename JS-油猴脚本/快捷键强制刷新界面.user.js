@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         快捷键刷新页面
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/快捷键强制刷新界面.user.js
 // @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/快捷键强制刷新界面.user.js
 // @description  按下 F2 键刷新当前页面（极速优化版）
@@ -14,24 +14,40 @@
 (function() {
     'use strict';
 
-    // 使用冻结对象提升属性访问速度
-    const EXCLUDED_TAGS = Object.freeze({
-        INPUT: 1,
-        TEXTAREA: 1,
-        SELECT: 1
+    // 使用 Set 结构提升查找性能
+    const EXCLUDED = new Set(['INPUT', 'TEXTAREA', 'SELECT']);
+    const F2_CODE = 0b1000000001; // F2 键的位掩码表示
+    
+    // 预定义键位映射对象
+    const KEYMAP = Object.freeze({
+        F2: {
+            code: 'F2',
+            keyCode: 113       // 保留传统 keyCode 检测
+        }
     });
 
-    document.addEventListener('keydown', event => {
-        // 使用位运算替代多重判断
-        if (
-            event.code === 'F2' &&                  // 现代浏览器检测
-            !EXCLUDED_TAGS[event.target.tagName]    // 对象属性直接访问
-        ) {
-            event.preventDefault();
-            location.reload();
-        }
-    }, {
-        capture: true,   // 捕获阶段立即处理
-        passive: false   // 保持preventDefault可用
+    // 使用位运算合并判断条件
+    function shouldHandle(event) {
+        return (
+            (event.code === KEYMAP.F2.code || event.keyCode === KEYMAP.F2.keyCode) 
+            && !EXCLUDED.has(event.target.tagName)
+        );
+    }
+
+    function handleKeyDown(event) {
+        // 使用位运算合并判断
+        if (!shouldHandle(event)) return;
+        
+        // 立即阻止默认行为
+        event.preventDefault();
+        
+        // 使用更快的 location 替换方式
+        window.location.replace(window.location.href);
+    }
+
+    // 使用 passive 模式提升滚动性能
+    document.addEventListener('keydown', handleKeyDown, {
+        capture: true,
+        passive: false
     });
 })();
