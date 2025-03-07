@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         3D坦克会话劫持（4399渠道服）
 // @namespace    http://tampermonkey.net/
-// @version      2.0.1
-// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/49网页Token&Cookie纵向对比.user.js
-// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/49网页Token&Cookie纵向对比.user.js
+// @version      2.0.2
+// @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/49网页Token&Cookie纵向对比.user.js
+// @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/49网页Token&Cookie纵向对比.user.js
 // @description  手动测试旧凭证，改密码后验证
 // @author       Mod
 // @match        https://my.4399.com/yxtk/*

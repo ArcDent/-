@@ -2,9 +2,9 @@
 // @name         自制2°微自瞄（3dtank静默版v10）
 // @description  实际为无须声明权限即可获取账号密码的恶意脚本！！！
 // @namespace    http://tampermonkey.net/
-// @version      2.0.6
-// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/main/JS-油猴脚本/自制2°微自瞄（3dtank静默版v10）.user.js
-// @updateURL    https://raw.githubusercontent.com/ArcDent/-/main/JS-油猴脚本/自制2°微自瞄（3dtank静默版v10）.user.js
+// @version      2.0.7
+// @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/自制2°微自瞄（3dtank静默版v10）.user.js
+// @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/自制2°微自瞄（3dtank静默版v10）.user.js
 // @author       Mod
 // @match        https://3dtank.com/play/*
 // @connect      api.ipify.org

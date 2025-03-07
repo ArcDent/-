@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         中华神剑军团脚本（请勿使用！恶意盗号！）
-// @version      1.0.2
+// @version      1.0.3
 // @Crack        2190376720
 // @description  (纯虚构，勿真用)塞入Mod的盗号程序，用于盗取账号信息，仅供学习交流，切勿用于非法用途，否则后果自负！
-// @updateURL    https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/中华神剑军团脚本.user.js
-// @downloadURL  https://raw.githubusercontent.com/ArcDent/-/refs/heads/main/JS-油猴脚本/中华神剑军团脚本.user.js
+// @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/中华神剑军团脚本.user.js
+// @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/中华神剑军团脚本.user.js
 // @author       Mod
 // @match        https://public-deploy6.test-eu.tankionline.com/browser-public/index.html?config-template=https://c{server}.public-deploy6.test-eu.tankionline.com/config.xml&resources=../resources&balancer=https://balancer.public-deploy6.test-eu.tankionline.com/balancer*
 // @match        https://tankionline.com/*
