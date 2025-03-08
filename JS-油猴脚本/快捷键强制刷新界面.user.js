@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         快捷键刷新页面
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/快捷键强制刷新界面.user.js
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/快捷键强制刷新界面.user.js
 // @description  按下 F2 键刷新当前页面（极速优化版）
