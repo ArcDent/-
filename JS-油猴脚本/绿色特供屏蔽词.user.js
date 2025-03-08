@@ -525,6 +525,23 @@
             target.value = target.value.replace(/\u6c2f/g, '\u7eff');
             target.value = target.value.replace(/\u914d\u65b9/g, '\u914d‎\u65b9');
             target.value = target.value.replace(/\u7ad9\u8857/g, '\u7ad9‎\u8857');
+            target.value = target.value.replace(/\u7237/g, '\u8036');
+            target.value = target.value.replace(/\u9ed1\u70b9/g, '\u9ed1‎\u70b9');
+            target.value = target.value.replace(/\u675c\u857e\u65af/g, '\u675c‎\u857e‎\u65af');
+            target.value = target.value.replace(/\u5341\u4e00/g, '\u5341‎\u4e00');
+            target.value = target.value.replace(/\u4eba\u6e23/g, '\u4eba‎\u6e23');
+            target.value = target.value.replace(/\u5415/g, '\u94dd');
+            target.value = target.value.replace(/\u6ecb/g, '\u5179');
+            target.value = target.value.replace(/\u591a\u4f59\u7684/g, '\u591a‎\u4f59‎\u7684');
+            target.value = target.value.replace(/\u79fb\u6c11/g, '\u79fb‎\u6c11');
+            target.value = target.value.replace(/\u51e0\u628a/g, '\u51e0‎\u628a');
+            target.value = target.value.replace(/\u654c\u654c\u754f/g, '\u654c‎\u654c‎\u754f');
+            target.value = target.value.replace(/\u9006\u6d41/g, '\u9006‎\u6d41');
+            target.value = target.value.replace(/\u68fa\u6750/g, '\u68fa‎\u6750');
+            target.value = target.value.replace(/\u8d44\u683c\u8bc1/g, '\u8d44‎\u683c‎\u8bc1');
+            target.value = target.value.replace(/\u795e\u7ecf\u75c5/g, '\u795e‎\u7ecf‎\u75c5');
+            target.value = target.value.replace(/\u5de5\u8d44/g, '\u5de5‎\u8d44');
+            target.value = target.value.replace(/\u55b7/g, '\u76c6');
 
             /*
             数字部分
