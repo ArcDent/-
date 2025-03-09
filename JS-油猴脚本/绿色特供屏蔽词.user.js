@@ -574,7 +574,7 @@
             target.value = target.value.replace(/\u80d6\u864e/g, '\u80d6‎\u864e');
             
             //空格部分
-             target.value = target.value.replace(/\u0020/g, '‎');//空格转为无间隙空白符号
+             target.value = target.value.replace(/\u007e/g, '‎');//~转为无间隙空白符号
 
 
             /*
