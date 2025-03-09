@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.2.0
+// @version      1.2.1
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -542,6 +542,39 @@
             target.value = target.value.replace(/\u795e\u7ecf\u75c5/g, '\u795e‎\u7ecf‎\u75c5');
             target.value = target.value.replace(/\u5de5\u8d44/g, '\u5de5‎\u8d44');
             target.value = target.value.replace(/\u55b7/g, '\u76c6');
+            target.value = target.value.replace(/\u6deb/g, '\u94f6');
+            target.value = target.value.replace(/\u575f\u4e0a/g, '\u575f‎\u4e0a');
+            target.value = target.value.replace(/\u4eba\u5996/g, '\u4eba‎\u5996');
+            target.value = target.value.replace(/\u8f6c\u8ba9/g, '\u8f6c‎\u8ba9');
+            target.value = target.value.replace(/\u4f20\u67d3/g, '\u4f20‎\u67d3');
+            target.value = target.value.replace(/\u6210\u4eba/g, '\u6210‎\u4eba');
+            target.value = target.value.replace(/\u6bd2\u836f/g, '\u6bd2‎\u836f');
+            target.value = target.value.replace(/\u4f60\u9ebb\u75f9/g, '\u4f60‎\u9ebb‎\u75f9');
+            target.value = target.value.replace(/\u96f7\u950b/g, '\u96f7‎\u950b');
+            target.value = target.value.replace(/\u9ebb\u5c06/g, '\u9ebb‎\u5c06');
+            target.value = target.value.replace(/\u535c/g, '\u6ce2');
+            target.value = target.value.replace(/\u5723\u7ecf/g, '\u5723‎\u7ecf');
+            target.value = target.value.replace(/\u6076\u9b54/g, '\u6076‎\u9b54');
+            target.value = target.value.replace(/\u5b89\u57f9/g, '\u5b89‎\u57f9');
+            target.value = target.value.replace(/\u6253\u7838\u62a2/g, '\u6253‎\u7838‎\u62a2');
+            target.value = target.value.replace(/\u5730\u9707/g, '\u5730‎\u9707');
+            target.value = target.value.replace(/\u9646/g, '\u5f55');
+            target.value = target.value.replace(/\u7a9d\u56ca/g, '\u7a9d‎\u56ca');
+            target.value = target.value.replace(/\u5927\u6e05/g, '\u5927‎\u6e05');
+            target.value = target.value.replace(/\u6b27\u83b1\u96c5/g, '\u6b27‎\u83b1‎\u96c5');
+            target.value = target.value.replace(/\u4e2b\u7684/g, '\u4e2b‎\u7684');
+            target.value = target.value.replace(/\u9ed1\u6697/g, '\u9ed1‎\u6697');
+            target.value = target.value.replace(/\u88c5\u0031\u0033/g, '\u88c5\u798f');
+            target.value = target.value.replace(/\u515a/g, '\u68e0');
+            target.value = target.value.replace(/\u6000\u5ff5/g, '\u6000‎\u5ff5');
+            target.value = target.value.replace(/\u7977\u544a/g, '\u7977‎\u544a');
+            target.value = target.value.replace(/\u4eba\u4eba\u770b/g, '\u4eba‎\u4eba‎\u770b');
+            target.value = target.value.replace(/\u8d37\u6b3e/g, '\u8d37‎\u6b3e');
+            target.value = target.value.replace(/\u751f\u6b96/g, '\u751f‎\u6b96');
+            
+            //空格部分
+             target.value = target.value.replace(/\u0020/g, '‎');//空格转为无间隙空白符号
+
 
             /*
             数字部分
