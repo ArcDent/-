@@ -573,6 +573,7 @@
             target.value = target.value.replace(/\u751f\u6b96/g, '\u751f‎\u6b96');
             target.value = target.value.replace(/\u80d6\u864e/g, '\u80d6‎\u864e');
             target.value = target.value.replace(/\u79c1\u4eba/g, '\u79c1‎\u4eba');
+            target.value = target.value.replace(/\u6bb7\u6d2a\u6d9b/g, '\u6bb7‎\u6d2a‎\u6d9b');
             
             //空格部分
              target.value = target.value.replace(/\u007e/g, '‎');//~转为无间隙空白符号
