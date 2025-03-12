@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.0.0
-// @author       Arc
+// @name         自动跳转登录
+// @version      1.0.1
+// @author       Mod
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/自动跳转登录.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/自动跳转登录.user.js
 // @match        https://3dtank.com/play/
