@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Unicode转义序列输出
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  将字符转换为Unicode转义序列并附加控制符标记
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
