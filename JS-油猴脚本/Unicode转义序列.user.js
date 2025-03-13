@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Unicode转义序列输出
 // @namespace    http://tampermonkey.net/
-// @version      1.1.1
+// @version      1.1.2
 // @description  将字符转换为Unicode转义序列并附加控制符标记
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
@@ -43,9 +43,6 @@
         'color: #2196F3; font-weight: bold;'
     );
 })();
-document.addEventListener("contextmenu", (e) => {
-    e.stopImmediatePropagation();
-}, {capture: true})
 
 //查询键码
 (function() {
@@ -121,4 +118,10 @@ document.addEventListener("contextmenu", (e) => {
     unsafeWindow.A = A;
     console.log('A() 函数已加载！输入 A() 查看所有按键，输入 A("按键") 查询特定按键');
 })();
+
+document.addEventListener("contextmenu", (e) => {
+    e.stopImmediatePropagation();
+}, {capture: true})
+
+
 
