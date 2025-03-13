@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         智能按键触发器
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.1.0
+// @description  Advanced keyboard automation with customizable sequences
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
-// @description  自定义按键顺序自动触发工具
 // @author       Arc
 // @match        *://*/*
+// @grant        GM_registerMenuCommand
 // @grant        GM_setValue
 // @grant        GM_getValue
 // ==/UserScript==
@@ -14,118 +15,182 @@
 (function() {
     'use strict';
 
-    // 配置存储
-    let config = {
-        keys: GM_getValue('keys', ['ArrowForward', 'ArrowBack', 'Space', 'ArrowLeft', 'ArrowRight']),
-        interval: GM_getValue('interval', 5000),
-        loopCount: GM_getValue('loopCount', 0),
-        isRunning: false
+    // 配置存储系统
+    const CONFIG_KEY = 'KEYBOARD_CONFIG';
+    const defaultConfig = {
+        keySequence: ['ArrowForward', 'ArrowBack', 'Space', 'ArrowLeft', 'ArrowRight'],
+        intervals: 500,
+        loopCount: 'infinite',
+        active: false
     };
 
-    let currentLoop = 0;
-    let timer = null;
-    let currentKeyIndex = 0;
+    // 初始化配置
+    let config = Object.assign({}, defaultConfig, GM_getValue(CONFIG_KEY, {}));
+
+    // 键盘映射表（可扩展）
+    const KEY_MAP = {
+        'Space': 32,
+        'ArrowLeft': 37,
+        'ArrowUp': 38,
+        'ArrowRight': 39,
+        'ArrowDown': 40,
+        'ArrowForward': 34,  // PageDown
+        'ArrowBack': 33      // PageUp
+    };
+
+    // 状态变量
+    let isRunning = false;
+    let currentTimeout = null;
 
     // 创建UI
-    const ui = document.createElement('div');
-    ui.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: rgba(0,0,0,0.8);
-        color: white;
-        padding: 15px;
-        border-radius: 8px;
-        z-index: 9999;
-        display: none;
-    `;
+    const panel = createControlPanel();
+    document.body.appendChild(panel);
 
-    ui.innerHTML = `
-        <h3 style="margin:0 0 10px 0;">按键配置</h3>
-        <div style="margin-bottom:10px;">
-            <label>按键顺序（逗号分隔）：</label>
-            <input type="text" id="keySequence" style="width:200px;" value="${config.keys.join(',')}">
-        </div>
-        <div style="margin-bottom:10px;">
-            <label>触发间隔（ms）：</label>
-            <input type="number" id="interval" value="${config.interval}" style="width:100px;">
-        </div>
-        <div style="margin-bottom:10px;">
-            <label>循环次数（0=无限）：</label>
-            <input type="number" id="loopCount" value="${config.loopCount}" style="width:100px;">
-        </div>
-        <button id="saveConfig" style="margin-right:10px;">保存</button>
-        <button id="closeUI">关闭</button>
-    `;
-
-    document.body.appendChild(ui);
-
-    // 事件监听
+    // 键盘监听
     document.addEventListener('keydown', (e) => {
-        if (e.key === '2' && e.location === 3) { // 小键盘2
-            ui.style.display = ui.style.display === 'none' ? 'block' : 'none';
-        }
         if (e.key === '1' && e.location === 3) { // 小键盘1
-            toggleExecution();
+            if (!isRunning) startAutomation();
+        }
+        if (e.key === '2' && e.location === 3) { // 小键盘2
+            panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
         }
     });
 
-    ui.querySelector('#saveConfig').addEventListener('click', saveConfig);
-    ui.querySelector('#closeUI').addEventListener('click', () => ui.style.display = 'none');
+    function createControlPanel() {
+        const panel = document.createElement('div');
+        panel.style = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(40,40,40,0.9);
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            min-width: 300px;
+        `;
 
-    function saveConfig() {
-        config.keys = ui.querySelector('#keySequence').value.split(',').map(k => k.trim());
-        config.interval = parseInt(ui.querySelector('#interval').value) || 5000;
-        config.loopCount = parseInt(ui.querySelector('#loopCount').value) || 0;
+        const html = `
+            <h3 style="margin-top:0;color:#00ff88">Auto Key Controller</h3>
+            <div style="margin-bottom:15px">
+                <label>按键序列（逗号分隔）：</label>
+                <input type="text" id="keySeq" value="${config.keySequence.join(',')}"
+                    style="width:96%;padding:5px;margin:5px 0"
+                    placeholder="例如：ArrowForward,ArrowBack,Space">
+            </div>
+            <div style="margin-bottom:15px">
+                <label>间隔时间（毫秒）：</label>
+                <input type="number" id="interval" value="${config.intervals}"
+                    style="width:96%;padding:5px;margin:5px 0" min="50">
+            </div>
+            <div style="margin-bottom:15px">
+                <label>循环次数：</label>
+                <input type="text" id="loopCount" value="${config.loopCount}"
+                    style="width:96%;padding:5px;margin:5px 0"
+                    placeholder="数字或'infinite'">
+            </div>
+            <div style="display:flex;gap:10px">
+                <button id="saveBtn" style="flex:1;padding:8px;background:#4CAF50;border:none;color:white">保存配置</button>
+                <button id="stopBtn" style="flex:1;padding:8px;background:#f44336;border:none;color:white">立即停止</button>
+            </div>
+            <div id="status" style="margin-top:10px;font-size:0.9em"></div>
+        `;
 
-        GM_setValue('keys', config.keys);
-        GM_setValue('interval', config.interval);
-        GM_setValue('loopCount', config.loopCount);
+        panel.innerHTML = html;
 
-        alert('配置已保存！');
+        // 事件绑定
+        panel.querySelector('#saveBtn').addEventListener('click', saveConfig);
+        panel.querySelector('#stopBtn').addEventListener('click', stopAutomation);
+
+        return panel;
     }
 
-    function toggleExecution() {
-        if (!config.isRunning) {
-            startExecution();
-        } else {
-            stopExecution();
+    async function startAutomation() {
+        if (isRunning) return;
+        isRunning = true;
+        updateStatus('运行中...', '#4CAF50');
+
+        let count = 0;
+        const maxLoop = isNaN(config.loopCount) ? Infinity : parseInt(config.loopCount);
+
+        while (isRunning && count < maxLoop) {
+            for (const key of config.keySequence) {
+                if (!isRunning) break;
+                await simulateKeyPress(key.trim());
+                await delay(config.intervals);
+            }
+            if (config.loopCount !== 'infinite') count++;
         }
-    }
 
-    function startExecution() {
-        config.isRunning = true;
-        currentLoop = 0;
-        currentKeyIndex = 0;
-
-        timer = setInterval(() => {
-            if (config.loopCount > 0 && currentLoop >= config.loopCount) {
-                stopExecution();
-                return;
-            }
-
-            const key = config.keys[currentKeyIndex];
-            simulateKeyPress(key);
-
-            currentKeyIndex = (currentKeyIndex + 1) % config.keys.length;
-            if (currentKeyIndex === 0) {
-                currentLoop++;
-            }
-        }, config.interval);
-    }
-
-    function stopExecution() {
-        config.isRunning = false;
-        clearInterval(timer);
+        stopAutomation();
     }
 
     function simulateKeyPress(key) {
-        const event = new KeyboardEvent('keydown', {
-            key: key,
-            code: key,
-            bubbles: true,
-            cancelable: true
+        return new Promise(resolve => {
+            const keyCode = KEY_MAP[key] || key.toUpperCase().charCodeAt(0);
+            const eventArgs = {
+                key: key,
+                keyCode: keyCode,
+                code: key,
+                bubbles: true,
+                cancelable: true
+            };
+
+            document.dispatchEvent(new KeyboardEvent('keydown', eventArgs));
+            document.dispatchEvent(new KeyboardEvent('keyup', eventArgs));
+
+            setTimeout(resolve, 50);
         });
-        document.dispatchEvent(event);
     }
+
+    function stopAutomation() {
+        isRunning = false;
+        if (currentTimeout) clearTimeout(currentTimeout);
+        updateStatus('已停止', '#f44336');
+        setTimeout(() => updateStatus('', ''), 2000);
+    }
+
+    function saveConfig() {
+        const keySeq = document.querySelector('#keySeq').value.split(',').filter(Boolean);
+        const interval = parseInt(document.querySelector('#interval').value) || 500;
+        const loopCount = document.querySelector('#loopCount').value;
+
+        if (!validateKeys(keySeq)) {
+            updateStatus('存在无效按键!', '#ff9800');
+            return;
+        }
+
+        config = {
+            keySequence: keySeq,
+            intervals: interval,
+            loopCount: loopCount === 'infinite' ? 'infinite' : parseInt(loopCount) || 0
+        };
+
+        GM_setValue(CONFIG_KEY, config);
+        updateStatus('配置已保存!', '#4CAF50');
+        setTimeout(() => updateStatus('', ''), 2000);
+    }
+
+    function validateKeys(keys) {
+        return keys.every(key => {
+            return KEY_MAP.hasOwnProperty(key) ||
+                (key.length === 1 && /^[a-zA-Z0-9]$/.test(key));
+        });
+    }
+
+    function updateStatus(text, color) {
+        const status = document.querySelector('#status');
+        status.textContent = text;
+        status.style.color = color || 'white';
+    }
+
+    function delay(ms) {
+        return new Promise(resolve => currentTimeout = setTimeout(resolve, ms));
+    }
+
+    // 注册菜单命令
+    GM_registerMenuCommand("显示控制面板", () => panel.style.display = 'block');
+    GM_registerMenuCommand("隐藏控制面板", () => panel.style.display = 'none');
 })();
