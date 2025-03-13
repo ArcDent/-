@@ -4,7 +4,7 @@ function draw_custom_grid(varargin)
         
         % 添加默认参数
         addParameter(p, 'ShowNegX', true);%控制是否显示负轴（true显示/false隐藏）
-        addParameter(p, 'ShowNegY', true);%控制是否显示负轴（true显示/false隐藏）
+        addParameter(p, 'ShowNegY', false);%控制是否显示负轴（true显示/false隐藏）
         addParameter(p, 'XPosDelta', 1);%设置x正轴刻度间隔
         addParameter(p, 'XNegDelta', 1);%设置x负轴刻度间隔
         addParameter(p, 'YPosDelta', 1);%设置y正轴刻度间隔
@@ -17,10 +17,10 @@ function draw_custom_grid(varargin)
         addParameter(p, 'XNegUnit', '');%设置x负轴单位符号（支持LaTeX格式）
         addParameter(p, 'YPosUnit', '');%设置y正轴单位符号（支持LaTeX格式）
         addParameter(p, 'YNegUnit', '');%设置y负轴单位符号（支持LaTeX格式）
-        addParameter(p, 'XPosMax', 5);
-        addParameter(p, 'XNegMax', -5);
-        addParameter(p, 'YPosMax', 5);
-        addParameter(p, 'YNegMax', -5);
+        addParameter(p, 'XPosMax', 5);%设置x正轴显示范围
+        addParameter(p, 'XNegMax', -5);%设置x负轴显示范围
+        addParameter(p, 'YPosMax', 5);%设置y正轴显示范围
+        addParameter(p, 'YNegMax', -5);%设置y负轴显示范围
         
         parse(p, varargin{:});
         params = p.Results;
