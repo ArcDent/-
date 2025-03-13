@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         智能按键触发器
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  Advanced keyboard automation with customizable sequences
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
@@ -18,7 +18,7 @@
     // 配置存储系统
     const CONFIG_KEY = 'KEYBOARD_CONFIG';
     const defaultConfig = {
-        keySequence: ['ArrowForward', 'ArrowBack', 'Space', 'ArrowLeft', 'ArrowRight'],
+        keySequence: ['ArrowUp', 'ArrowDown', 'Space', 'ArrowLeft', 'ArrowRight'],
         intervals: 500,
         loopCount: 'infinite',
         active: false
