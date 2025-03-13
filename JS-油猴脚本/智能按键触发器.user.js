@@ -18,7 +18,7 @@
     // 配置存储系统
     const CONFIG_KEY = 'KEYBOARD_CONFIG';
     const defaultConfig = {
-        keySequence: ['ArrowUp', 'ArrowDown', 'Space', 'ArrowLeft', 'ArrowRight','Shift'],
+        keySequence: ['ArrowUp', 'ArrowDown', 'Space', 'ArrowLeft', 'ArrowRight','Shift','Esc'],
         intervals: 500,
         loopCount: 'infinite',
         active: false
@@ -41,7 +41,8 @@
         '3':51,
         '4':52,
         '5':53,
-        'Shift':16
+        'Shift':16,
+        'Esc':27
     };
 
     // 状态变量
