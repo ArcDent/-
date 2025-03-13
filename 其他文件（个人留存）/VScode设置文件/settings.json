@@ -1,0 +1,23 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onFocusChange",
+    "workbench.settings.applyToAllProfiles": [
+
+    ]
+    ,"files.associations": {
+        "*.m": "matlab"
+        //其他关联设置在此处添加
+    },
+    "matlab.matlabpath": "C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+    "matlab.mlintpath": "C:\\Program Files\\MATLAB\\R2024a\\bin\\win64\\mlint.exe",
+    "matlab.linterEncoding": "utf-8",
+    "[matlab]": {
+        "files.encoding": "gb2312"
+    }
+
+}

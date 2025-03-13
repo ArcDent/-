@@ -5,22 +5,22 @@ function draw_custom_grid(varargin)
         % 添加默认参数
         addParameter(p, 'ShowNegX', true);%控制是否显示负轴（true显示/false隐藏）
         addParameter(p, 'ShowNegY', false);%控制是否显示负轴（true显示/false隐藏）
-        addParameter(p, 'XPosDelta', 1);%设置x正轴刻度间隔
-        addParameter(p, 'XNegDelta', 1);%设置x负轴刻度间隔
-        addParameter(p, 'YPosDelta', 1);%设置y正轴刻度间隔
-        addParameter(p, 'YNegDelta', 1);%设置y负轴刻度间隔
+        addParameter(p, 'XPosDelta', 0.1);%设置x正轴刻度间隔
+        addParameter(p, 'XNegDelta', 0.1);%设置x负轴刻度间隔
+        addParameter(p, 'YPosDelta', 0.1);%设置y正轴刻度间隔
+        addParameter(p, 'YNegDelta', 0.1);%设置y负轴刻度间隔
         addParameter(p, 'XPosScale', 1);%设置x正轴刻度值的缩放比例
         addParameter(p, 'XNegScale', 1);%设置x负轴刻度值的缩放比例
         addParameter(p, 'YPosScale', 1);%设置y正轴刻度值的缩放比例
         addParameter(p, 'YNegScale', 1);%设置y负轴刻度值的缩放比例
-        addParameter(p, 'XPosUnit', '');%设置x正轴单位符号（支持LaTeX格式）
-        addParameter(p, 'XNegUnit', '');%设置x负轴单位符号（支持LaTeX格式）
-        addParameter(p, 'YPosUnit', '');%设置y正轴单位符号（支持LaTeX格式）
-        addParameter(p, 'YNegUnit', '');%设置y负轴单位符号（支持LaTeX格式）
-        addParameter(p, 'XPosMax', 5);%设置x正轴显示范围
-        addParameter(p, 'XNegMax', -5);%设置x负轴显示范围
-        addParameter(p, 'YPosMax', 5);%设置y正轴显示范围
-        addParameter(p, 'YNegMax', -5);%设置y负轴显示范围
+        addParameter(p, 'XPosUnit', 'V');%设置x正轴单位符号（支持LaTeX格式）
+        addParameter(p, 'XNegUnit', 'V');%设置x负轴单位符号（支持LaTeX格式）
+        addParameter(p, 'YPosUnit', 'mA');%设置y正轴单位符号（支持LaTeX格式）
+        addParameter(p, 'YNegUnit', 'μA');%设置y负轴单位符号（支持LaTeX格式）
+        addParameter(p, 'XPosMax', 1.2);%设置x正轴显示范围
+        addParameter(p, 'XNegMax', -15);%设置x负轴显示范围
+        addParameter(p, 'YPosMax', 15);%设置y正轴显示范围
+        addParameter(p, 'YNegMax', -8);%设置y负轴显示范围
         
         parse(p, varargin{:});
         params = p.Results;
