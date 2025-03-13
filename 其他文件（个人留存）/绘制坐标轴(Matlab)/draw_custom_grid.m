@@ -9,14 +9,14 @@ function draw_custom_grid(varargin)
         addParameter(p, 'XNegDelta', 1);%设置x负轴刻度间隔
         addParameter(p, 'YPosDelta', 1);%设置y正轴刻度间隔
         addParameter(p, 'YNegDelta', 1);%设置y负轴刻度间隔
-        addParameter(p, 'XPosScale', 1);
-        addParameter(p, 'XNegScale', 1);
-        addParameter(p, 'YPosScale', 1);
-        addParameter(p, 'YNegScale', 1);
-        addParameter(p, 'XPosUnit', '');
-        addParameter(p, 'XNegUnit', '');
-        addParameter(p, 'YPosUnit', '');
-        addParameter(p, 'YNegUnit', '');
+        addParameter(p, 'XPosScale', 1);%设置x正轴刻度值的缩放比例
+        addParameter(p, 'XNegScale', 1);%设置x负轴刻度值的缩放比例
+        addParameter(p, 'YPosScale', 1);%设置y正轴刻度值的缩放比例
+        addParameter(p, 'YNegScale', 1);%设置y负轴刻度值的缩放比例
+        addParameter(p, 'XPosUnit', '');%设置x正轴单位符号（支持LaTeX格式）
+        addParameter(p, 'XNegUnit', '');%设置x负轴单位符号（支持LaTeX格式）
+        addParameter(p, 'YPosUnit', '');%设置y正轴单位符号（支持LaTeX格式）
+        addParameter(p, 'YNegUnit', '');%设置y负轴单位符号（支持LaTeX格式）
         addParameter(p, 'XPosMax', 5);
         addParameter(p, 'XNegMax', -5);
         addParameter(p, 'YPosMax', 5);
