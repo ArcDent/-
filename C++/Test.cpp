@@ -7,6 +7,7 @@ int main()
         c=a;
         a=b;
         b=c;
+    printf("a=%d,b=%d,c=%d",a,b,c);
     return 0;
 }
     
