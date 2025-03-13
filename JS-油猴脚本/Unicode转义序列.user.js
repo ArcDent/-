@@ -121,3 +121,4 @@ document.addEventListener("contextmenu", (e) => {
     unsafeWindow.A = A;
     console.log('A() 函数已加载！输入 A() 查看所有按键，输入 A("按键") 查询特定按键');
 })();
+
