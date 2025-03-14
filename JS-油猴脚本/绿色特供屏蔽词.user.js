@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.4.7
+// @version      1.4.8
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @match        https://3dtank.com/play/
 // @match        https://game.4399iw2.com/yxtk/*
+// @match        http://3dtank.com/play/
+// @match        http://game.4399iw2.com/yxtk/*
 // @grant        GM_setClipboard
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // ==/UserScript==
