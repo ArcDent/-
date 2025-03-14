@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.4.8
+// @version      1.4.9
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1225,7 +1225,7 @@
 
                     // 复制团标
                     if (clanTag) {
-                        menu.prepend(createContextMenuOption('复制团标', 'copy-clan', () => {
+                        menu.append(createContextMenuOption('复制团标', 'copy-clan', () => {
                             GM_setClipboard(clanTag);
                             showNotification(`已复制团标：${clanTag}`);
                         }));
@@ -1233,7 +1233,7 @@
 
                     // 复制ID
                     if (gameID) {
-                        menu.prepend(createContextMenuOption('复制ID', 'copy-id', () => {
+                        menu.append(createContextMenuOption('复制ID', 'copy-id', () => {
                             GM_setClipboard(gameID);
                             showNotification(`已复制ID：${gameID}`);
                         }));
@@ -1257,7 +1257,7 @@
             background: rgba(128, 128, 128, 0.3) !important;
             border-radius: inherit;
         }
-        .copy-clan:clan, .copy-id:hover {
+        .copy-clan:hover, .copy-id:hover {
             background: rgba(255, 255, 255, 0.1) !important;
         }
     `;
