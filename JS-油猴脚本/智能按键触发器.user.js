@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         智能按键触发器
 // @namespace    http://tampermonkey.net/
-// @version      1.1.4
+// @version      1.1.5
 // @description  Advanced keyboard automation with customizable sequences
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/智能按键触发器.user.js
 // @author       Arc
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // @match        *://*/*
 // @grant        GM_registerMenuCommand
 // @grant        GM_setValue

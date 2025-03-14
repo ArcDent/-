@@ -4,6 +4,7 @@
 // @version      2.6
 // @description  在3D坦克查看用户菜单中添加“复制军团标”选项，仅为有军团标的用户显示，并确保样式一致，49国服共用
 // @author       Mod
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
 // @match        https://3dtank.com/play/*
 // @match        http://game.4399iw2.com/yxtk/*
 // @grant        GM_setClipboard
