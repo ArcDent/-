@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.4.4
+// @version      1.4.5
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1271,6 +1271,53 @@
         }, 3000);
     }
 
+    // 降级方案
+    function fallbackCopyText(text) {
+        try {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textarea);
+            return successful;
+        } catch (err) {
+            console.error('降级复制失败:', err);
+            return false;
+        }
+    }
+
+    function safeCopyText(text) {
+        // 检查 API 是否可用
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            GM_setClipboard(text)
+                .then(() => {
+                    console.log(`已通过 GM_setClipboard 复制军团标: ${text}`);
+                    showFloatingNotification(`成功复制军团标：${text}`, true);
+                })
+                .catch(err => {
+                    console.error('GM_setClipboard 失败:', err);
+                    // 降级方案
+                    if (fallbackCopyText(text)) {
+                        showFloatingNotification(`成功复制军团标（降级方案）：${text}`, true);
+                    } else {
+                        showFloatingNotification('复制失败：剪贴板权限不足或环境限制', false);
+                    }
+                });
+        } else {
+            //直接使用降级方案
+            console.warn('Clipboard API 不可用，尝试降级方案');
+            if (fallbackCopyText(text)) {
+                showFloatingNotification(`成功复制军团标（降级方案）：${text}`, true);
+            } else {
+                showFloatingNotification('复制失败：剪贴板权限不足或环境限制', false);
+            }
+        }
+    }
+
     function addCopyClanTagOption(contextMenu, copyNameOption, username) {
         if (!contextMenu.querySelector('.copy-clan-tag') && username && username.includes('[') && username.includes(']')) {
             const copyClanTagOption = document.createElement('div');
@@ -1349,9 +1396,7 @@
                     }
                 }
                 if (clanTag) {
-                    GM_setClipboard(clanTag);
-                    console.log(`已复制军团标: ${clanTag}`);
-                    showFloatingNotification(`成功复制军团标：${clanTag}`, true);
+                    safeCopyText(clanTag);
                 } else {
                     console.log('未找到军团标，当前用户名: ' + username);
                     showFloatingNotification('未找到军团标', false);
@@ -1360,7 +1405,6 @@
         }
     }
 
-    // 优化性能支持多次添加
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             const contextMenus = document.querySelectorAll('.ContextMenuStyle-menu');
