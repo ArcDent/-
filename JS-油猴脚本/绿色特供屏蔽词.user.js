@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.4.1
+// @version      1.4.2
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1276,7 +1276,7 @@
             copyClanTagOption.className = 'ksc-67 Common-flexStartAlignCenter copy-clan-tag';
 
             const spanElement = document.createElement('span');
-            spanElement.textContent = '复制团标';
+            spanElement.textContent = '复制军团标';
             copyClanTagOption.appendChild(spanElement);
 
             if (copyNameOption) {
@@ -1329,9 +1329,9 @@
             }
 
             copyClanTagOption.addEventListener('click', () => {
-                console.log(`点击“复制团标”，当前用户名: ${username}`);
+                console.log(`点击“复制军团标”，当前用户名: ${username}`);
                 if (!username) {
-                    console.log('用户名为空，无法提取团标');
+                    console.log('用户名为空，无法提取军团标');
                     showFloatingNotification('未找到用户名', false);
                     return;
                 }
@@ -1349,11 +1349,11 @@
                 }
                 if (clanTag) {
                     GM_setClipboard(clanTag);
-                    console.log(`已复制团标: ${clanTag}`);
-                    showFloatingNotification(`成功复制团标：${clanTag}`, true);
+                    console.log(`已复制军团标: ${clanTag}`);
+                    showFloatingNotification(`成功复制军团标：${clanTag}`, true);
                 } else {
-                    console.log('未找到团标，当前用户名: ' + username);
-                    showFloatingNotification('未找到团标', false);
+                    console.log('未找到军团标，当前用户名: ' + username);
+                    showFloatingNotification('未找到军团标', false);
                 }
             });
         }
