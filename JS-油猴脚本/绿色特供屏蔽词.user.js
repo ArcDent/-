@@ -1257,7 +1257,7 @@
             background: rgba(128, 128, 128, 0.3) !important;
             border-radius: inherit;
         }
-        .copy-clan, .copy-id:hover {
+        .copy-clan:clan, .copy-id:hover {
             background: rgba(255, 255, 255, 0.1) !important;
         }
     `;
