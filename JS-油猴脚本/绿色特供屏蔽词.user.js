@@ -1264,7 +1264,7 @@
     document.head.append(style);
 
     /* 初始化 */
-    setInterval(injectServiceButtons, 500);
+    setInterval(injectServiceButtons, 50);
     enhanceContextMenu();
 })();
 
