@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.4.9
+// @version      1.4.10
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1195,7 +1195,7 @@
         option.append(span);
 
         Object.assign(option.style, {
-            padding: '5px 25px',
+            padding: '7px 29px',
             margin: '0px',
             color: '#fff',
             width: '76%',
