@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         呼出客服++复制ID团标
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  快速呼出客服/复制游戏ID/复制军团标，优化操作体验
+// @version      1.2.1
+// @description  快速呼出客服/复制游戏ID/复制军团标，优化操作体验 已坠机
 // @author       Arc
 // @match        https://tankionline.com/*
 // @match        https://3dtank.com/play/*

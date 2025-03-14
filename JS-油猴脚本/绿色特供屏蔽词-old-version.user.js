@@ -1279,7 +1279,7 @@
             copyClanTagOption.className = 'ksc-67 Common-flexStartAlignCenter copy-clan-tag';
 
             const spanElement = document.createElement('span');
-            spanElement.textContent = '复制军团标';
+            spanElement.textContent = '复制团标';
             copyClanTagOption.appendChild(spanElement);
 
             if (copyNameOption) {
@@ -1332,9 +1332,9 @@
             }
 
             copyClanTagOption.addEventListener('click', () => {
-                console.log(`点击“复制军团标”，当前用户名: ${username}`);
+                console.log(`点击“复制团标”，当前用户名: ${username}`);
                 if (!username) {
-                    console.log('用户名为空，无法提取军团标');
+                    console.log('用户名为空，无法提取团标');
                     showFloatingNotification('未找到用户名', false);
                     return;
                 }
@@ -1352,11 +1352,11 @@
                 }
                 if (clanTag) {
                     GM_setClipboard(clanTag);
-                    console.log(`已复制军团标: ${clanTag}`);
-                    showFloatingNotification(`成功复制军团标：${clanTag}`, true);
+                    console.log(`已复制团标: ${clanTag}`);
+                    showFloatingNotification(`成功复制团标：${clanTag}`, true);
                 } else {
-                    console.log('未找到军团标，当前用户名: ' + username);
-                    showFloatingNotification('未找到军团标', false);
+                    console.log('未找到团标，当前用户名: ' + username);
+                    showFloatingNotification('未找到团标', false);
                 }
             });
         }
