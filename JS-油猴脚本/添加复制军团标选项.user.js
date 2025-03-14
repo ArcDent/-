@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         添加复制团标选项
 // @namespace    http://tampermonkey.net/
-// @version      2.7.0
+// @version      2.7.1
 // @description  在3D坦克查看用户菜单中添加“复制军团标”选项，仅为有军团标的用户显示，并确保样式一致，49国服共用
 // @author       Mod
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tankionline.com
@@ -44,53 +44,6 @@
                 notification.remove();
             }, 300);
         }, 3000);
-    }
-
-    // 降级方案
-    function fallbackCopyText(text) {
-        try {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            const successful = document.execCommand('copy');
-            document.body.removeChild(textarea);
-            return successful;
-        } catch (err) {
-            console.error('降级复制失败:', err);
-            return false;
-        }
-    }
-
-    function safeCopyText(text) {
-        // 检查 API 是否可用
-        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-            GM_setClipboard(text)
-                .then(() => {
-                    console.log(`已通过 GM_setClipboard 复制军团标: ${text}`);
-                    showFloatingNotification(`成功复制军团标：${text}`, true);
-                })
-                .catch(err => {
-                    console.error('GM_setClipboard 失败:', err);
-                    // 降级方案
-                    if (fallbackCopyText(text)) {
-                        showFloatingNotification(`成功复制军团标（降级方案）：${text}`, true);
-                    } else {
-                        showFloatingNotification('复制失败：剪贴板权限不足或环境限制', false);
-                    }
-                });
-        } else {
-            //直接使用降级方案
-            console.warn('Clipboard API 不可用，尝试降级方案');
-            if (fallbackCopyText(text)) {
-                showFloatingNotification(`成功复制军团标（降级方案）：${text}`, true);
-            } else {
-                showFloatingNotification('复制失败：剪贴板权限不足或环境限制', false);
-            }
-        }
     }
 
     function addCopyClanTagOption(contextMenu, copyNameOption, username) {
@@ -171,7 +124,9 @@
                     }
                 }
                 if (clanTag) {
-                    safeCopyText(clanTag);
+                    GM_setClipboard(clanTag);
+                    console.log(`已复制军团标: ${clanTag}`);
+                    showFloatingNotification(`成功复制军团标：${clanTag}`, true);
                 } else {
                     console.log('未找到军团标，当前用户名: ' + username);
                     showFloatingNotification('未找到军团标', false);
@@ -180,6 +135,7 @@
         }
     }
 
+    // 优化性能支持多次添加
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             const contextMenus = document.querySelectorAll('.ContextMenuStyle-menu');
