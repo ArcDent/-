@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.5.1
+// @version      1.5.2
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1072,7 +1072,6 @@
     addButtonIfTargetExists();
 })();
 
-//客服呼出&复制名字bug修复
 (function() {
     'use strict';
 
@@ -1236,6 +1235,47 @@
 
     // 每隔 500 毫秒调用一次 findAndDuplicateElement 函数
     const intervalId = setInterval(findAndDuplicateElement, 1);
+})();
+
+(function() {
+    'use strict';
+
+    // 可自定义要减去的像素值
+    const subtractValue = 90;
+
+    // 用于记录已经处理过的元素
+    const processedElements = new WeakSet();
+
+    // 定义一个函数来修改 top 样式值
+    function modifyTopValue() {
+        // 查找所有目标元素
+        const targetElements = document.querySelectorAll("#modal-root > div");
+
+        targetElements.forEach(targetElement => {
+            // 检查元素是否已经处理过
+            if (!processedElements.has(targetElement)) {
+                // 获取当前的 top 样式值
+                const topValue = window.getComputedStyle(targetElement).getPropertyValue('top');
+
+                if (topValue) {
+                    // 提取数字部分
+                    const topNumber = parseFloat(topValue.replace('px', ''));
+
+                    if (!isNaN(topNumber)) {
+                        // 计算新的 top 值
+                        const newTop = topNumber - subtractValue;
+                        // 设置新的 top 样式值
+                        targetElement.style.top = newTop + 'px';
+                        // 将元素标记为已处理
+                        processedElements.add(targetElement);
+                    }
+                }
+            }
+        });
+    }
+
+    // 每隔 100 毫秒执行一次查找和修改操作
+    setInterval(modifyTopValue, 1);
 })();
 
 //复制团标
