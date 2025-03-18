@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.5.5
+// @version      1.5.6
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1239,7 +1239,7 @@
     const intervalId = setInterval(findAndDuplicateElement, 1);
 })();
 
-//复制团标
+/*复制团标
 (function() {
     'use strict';
 
@@ -1397,5 +1397,5 @@
         contextMenus.forEach(menu => delete menu.dataset.processed);
     });
 })();
-
+*/
 
