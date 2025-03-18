@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.5.6
+// @version      1.5.7
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/绿色特供屏蔽词.user.js
@@ -1073,7 +1073,7 @@
     addButtonIfTargetExists();
 })();
 
-//客服呼出&复制名字bug修复
+/*客服呼出&复制名字bug修复
 (function() {
     'use strict';
 
@@ -1212,15 +1212,15 @@
 
         const config = { attributes: true, attributeFilter: ['style'] };
         observer.observe(modalRoot, config);
-    }
+    } 
 
-    // 向页面中注入 CSS 样式
+    //向页面中注入 CSS 样式
     const style = document.createElement('style');
     style.textContent = `
       .custom-cloned-element {
             background-color: transparent;
             background-image: none;
-            box-sizing: border-box; /* 确保内边距和边框包含在元素的宽度和高度内 */
+            box-sizing: border-box; // 确保内边距和边框包含在元素的宽度和高度内 
         }
       .custom-cloned-element span {
             background-color: transparent;
@@ -1228,18 +1228,19 @@
             box-sizing: border-box;
         }
       .custom-cloned-element span:hover {
-            background-color: rgba(128, 128, 128, 0.3); /* 鼠标悬停时的背景颜色，可根据需求调整 */
-            border-radius: inherit; /* 继承原元素的边框圆角 */
-            overflow: hidden; /* 防止背景溢出 */
+            background-color: rgba(128, 128, 128, 0.3); // 鼠标悬停时的背景颜色，可根据需求调整
+            border-radius: inherit; // 继承原元素的边框圆角 
+            overflow: hidden; // 防止背景溢出 
         }
     `;
     document.head.appendChild(style);
 
     // 每隔 500 毫秒调用一次 findAndDuplicateElement 函数
     const intervalId = setInterval(findAndDuplicateElement, 1);
-})();
+})();*/
 
-/*复制团标
+
+复制团标
 (function() {
     'use strict';
 
@@ -1397,5 +1398,5 @@
         contextMenus.forEach(menu => delete menu.dataset.processed);
     });
 })();
-*/
+
 
