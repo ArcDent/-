@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.5.8
+// @version      1.5.9
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
@@ -788,4 +788,54 @@
 
     // 开始定期检查聊天框是否出现
     const checkIntervalId = setInterval(checkForChatBox, checkInterval);
+})();
+
+//取消记住密码
+(function() {
+    let isInitialClicked = false; // 标记初始按钮是否已点击
+    let isSecondClicked = false; // 标记第二个路径按钮是否已点击
+    let clickedButtonsForThirdPath = new Set(); // 针对第三个路径，使用Set记录已经点击过的按钮，避免重复点击
+
+    function tryClickInitialButton() {
+        if (!isInitialClicked) {
+            // 查找初始路径下ksc-数字不固定的按钮
+            const initialButtons = document.querySelectorAll("#root > div[class^='ksc-'] > div.Common-entranceGradient > div.Common-contentSpaceBetween > div.EntranceComponentStyle-ContainerForm > form > div.MainEntranceComponentStyle-container > div");
+            if (initialButtons.length > 0) {
+                initialButtons[0].click();
+                isInitialClicked = true; // 点击后标记已点击
+            }
+        }
+    }
+
+    function tryClickSecondButton() {
+        if (isInitialClicked &&!isSecondClicked) {
+            // 查找第二个路径（nth-child(2)对应的）下ksc-数字不固定的按钮
+            const secondButtons = document.querySelectorAll("#root > div[class^='ksc-'] > div.Common-entranceGradient > div.Common-contentSpaceBetween > div.EntranceComponentStyle-ContainerForm > form > div.MainEntranceComponentStyle-container > div:nth-child(2)");
+            if (secondButtons.length > 0) {
+                secondButtons[0].click();
+                isSecondClicked = true; // 点击后标记已点击
+            }
+        }
+    }
+
+    function tryClickThirdButton() {
+        if (isInitialClicked && isSecondClicked) {
+            // 查找第三个路径及其子路径下ksc-数字不固定的按钮
+            const thirdButtons = document.querySelectorAll("#root > div[class^='ksc-'] > div.Common-entranceGradient > div.Common-contentSpaceBetween > div[class^='ksc-'].EntranceComponentStyle-ContainerForm > form > div[class^='ksc-'].EntranceComponentStyle-blockCheckedLink.Common-flexStartAlignStartColumn > div[class^='ksc-'].EntranceComponentStyle-checkbox > div > label > span");
+            for (const button of thirdButtons) {
+                if (!clickedButtonsForThirdPath.has(button)) {
+                    button.click();
+                    clickedButtonsForThirdPath.add(button);
+                }
+            }
+        }
+    }
+
+    function checkAndClickButtons() {
+        tryClickInitialButton();
+        tryClickSecondButton();
+        tryClickThirdButton();
+    }
+
+    setInterval(checkAndClickButtons, 1);
 })();
