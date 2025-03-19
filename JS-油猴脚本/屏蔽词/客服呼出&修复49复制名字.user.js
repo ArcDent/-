@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         复刻-客服&复制
-// @version      1.0.0
+// @version      1.0.1
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/客服呼出&修复49复制名字.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/客服呼出&修复49复制名字.user.js
@@ -151,15 +151,15 @@
 
         const config = { attributes: true, attributeFilter: ['style'] };
         observer.observe(modalRoot, config);
-    } 
+    }
 
-    //向页面中注入 CSS 样式
+    // 向页面中注入 CSS 样式
     const style = document.createElement('style');
     style.textContent = `
       .custom-cloned-element {
             background-color: transparent;
             background-image: none;
-            box-sizing: border-box; // 确保内边距和边框包含在元素的宽度和高度内 
+            box-sizing: border-box; /* 确保内边距和边框包含在元素的宽度和高度内 */
         }
       .custom-cloned-element span {
             background-color: transparent;
@@ -167,13 +167,54 @@
             box-sizing: border-box;
         }
       .custom-cloned-element span:hover {
-            background-color: rgba(128, 128, 128, 0.3); // 鼠标悬停时的背景颜色，可根据需求调整
-            border-radius: inherit; // 继承原元素的边框圆角 
-            overflow: hidden; // 防止背景溢出 
+            background-color: rgba(128, 128, 128, 0.3); /* 鼠标悬停时的背景颜色，可根据需求调整 */
+            border-radius: inherit; /* 继承原元素的边框圆角 */
+            overflow: hidden; /* 防止背景溢出 */
         }
     `;
     document.head.appendChild(style);
 
     // 每隔 500 毫秒调用一次 findAndDuplicateElement 函数
     const intervalId = setInterval(findAndDuplicateElement, 1);
+})();
+
+(function() {
+    'use strict';
+
+    // 可自定义要减去的像素值
+    const subtractValue = 90;
+
+    // 用于记录已经处理过的元素
+    const processedElements = new WeakSet();
+
+    // 定义一个函数来修改 top 样式值
+    function modifyTopValue() {
+        // 查找所有目标元素
+        const targetElements = document.querySelectorAll("#modal-root > div");
+
+        targetElements.forEach(targetElement => {
+            // 检查元素是否已经处理过
+            if (!processedElements.has(targetElement)) {
+                // 获取当前的 top 样式值
+                const topValue = window.getComputedStyle(targetElement).getPropertyValue('top');
+
+                if (topValue) {
+                    // 提取数字部分
+                    const topNumber = parseFloat(topValue.replace('px', ''));
+
+                    if (!isNaN(topNumber)) {
+                        // 计算新的 top 值
+                        const newTop = topNumber - subtractValue;
+                        // 设置新的 top 样式值
+                        targetElement.style.top = newTop + 'px';
+                        // 将元素标记为已处理
+                        processedElements.add(targetElement);
+                    }
+                }
+            }
+        });
+    }
+
+    // 每隔 100 毫秒执行一次查找和修改操作
+    setInterval(modifyTopValue, 1);
 })();
