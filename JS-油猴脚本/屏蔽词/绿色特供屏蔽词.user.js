@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.5.9
+// @version      1.5.10
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
@@ -597,7 +597,8 @@
             target.value = target.value.replace(/\u8dd1\u5f97\u5feb/g, '\u8dd1‎\u5f97‎\u5feb');
             target.value = target.value.replace(/\u5f90\u660e/g, '\u5f90‎\u660e');
             target.value = target.value.replace(/\u4f60\u597d\u574f/g, '\u4f60‎\u597d‎\u574f');
-            
+            target.value = target.value.replace(/\u7d20\u70ae/g, '\u7d20‎\u70ae');
+            target.value = target.value.replace(/\u611f\u67d3/g, '\u611f‎\u67d3');
             
             //空格部分
              target.value = target.value.replace(/\u007e/g, '‎');//~转为无间隙空白符号
