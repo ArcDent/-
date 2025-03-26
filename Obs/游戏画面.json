@@ -1,0 +1,2085 @@
+{
+    "DesktopAudioDevice1": {
+        "prev_ver": 520093698,
+        "name": "桌面音频",
+        "uuid": "0129a17f-9284-4d73-b244-8724429b078f",
+        "id": "wasapi_output_capture",
+        "versioned_id": "wasapi_output_capture",
+        "settings": {
+            "device_id": "default"
+        },
+        "mixers": 193,
+        "sync": 0,
+        "flags": 0,
+        "volume": 4.4668354988098145,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": true,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {
+            "mixer_hidden": false
+        }
+    },
+    "AuxAudioDevice1": {
+        "prev_ver": 520093698,
+        "name": "麦克风/Aux",
+        "uuid": "33aa9d77-6cbb-45be-8bba-31512384890f",
+        "id": "wasapi_input_capture",
+        "versioned_id": "wasapi_input_capture",
+        "settings": {
+            "device_id": "{0.0.1.00000000}.{189da99d-c47e-48ab-a854-0e7b5c8bbb9b}"
+        },
+        "mixers": 193,
+        "sync": 0,
+        "flags": 0,
+        "volume": 1.0,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": true,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [
+                {
+                    "key": "OBS_KEY_ASCIITILDE"
+                }
+            ]
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {}
+    },
+    "current_scene": "游戏画面-坦克",
+    "current_program_scene": "游戏画面-坦克",
+    "scene_order": [
+        {
+            "name": "游戏画面-坦克"
+        }
+    ],
+    "name": "未命名",
+    "groups": [
+        {
+            "prev_ver": 520093698,
+            "name": "音频",
+            "uuid": "4574e1d2-ce66-4543-b04f-2f8ea2d7ddb4",
+            "id": "group",
+            "versioned_id": "group",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": true,
+                "cx": 0,
+                "cy": 0,
+                "items": [
+                    {
+                        "name": "Tanki-国服-Google-音频",
+                        "source_uuid": "26c8bbfc-6ba4-48aa-801e-0154479c05a3",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.6000000238418579,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "BackgroundMusic-Spotify",
+                        "source_uuid": "4f8dd9ad-24f1-4fa5-8c8d-a04b4b54a723",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.6000000238418579,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "窗口采集",
+            "uuid": "f4475926-b1b0-45c1-bcd8-8ddede967262",
+            "id": "group",
+            "versioned_id": "group",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": true,
+                "cx": 2559,
+                "cy": 1558,
+                "items": [
+                    {
+                        "name": "Tanki-国服-Google-窗口",
+                        "source_uuid": "870624ac-33cd-42e4-8c6c-0146f4912730",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.6000000238418579,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "Tanki-国服-Google-窗口 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "Tanki-国服-Google-窗口 隐藏转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": false
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "遮挡-道具",
+                        "source_uuid": "d0d56cb3-daf0-4308-b058-c05295757692",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 9,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 2019.238037109375,
+                            "y": 1507.05810546875
+                        },
+                        "pos_rel": {
+                            "x": 0.92404752969741821,
+                            "y": 0.88382256031036377
+                        },
+                        "scale": {
+                            "x": 0.10893192142248154,
+                            "y": 0.10919101536273956
+                        },
+                        "scale_rel": {
+                            "x": 0.10900000482797623,
+                            "y": 0.10925925523042679
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-道具 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-道具 隐藏转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": false
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "遮挡-核能手雷",
+                        "source_uuid": "54cc85ee-9414-47c9-8fce-6e13b0ae73bd",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 8,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 234.3533935546875,
+                            "y": 1508.0574951171875
+                        },
+                        "pos_rel": {
+                            "x": -1.3070582151412964,
+                            "y": 0.88507187366485596
+                        },
+                        "scale": {
+                            "x": 0.045284204185009003,
+                            "y": 0.045342031866312027
+                        },
+                        "scale_rel": {
+                            "x": 0.045312505215406418,
+                            "y": 0.045370370149612427
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-核能手雷 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-核能手雷 隐藏转场动画",
+                            "transition": {
+                                "direction": "left"
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": [],
+                "source_record.enable": [],
+                "source_record.disable": [],
+                "source_record.PauseRecording": [],
+                "source_record.UnpauseRecording": [],
+                "source_record.SplitRecording": [],
+                "source_record.AddChapterMarker": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093698,
+                    "name": "画面单独录制-国服-Google",
+                    "uuid": "e8a2babc-6b7a-491a-a8c3-f529b11cf1c0",
+                    "id": "source_record_filter",
+                    "versioned_id": "source_record_filter",
+                    "settings": {
+                        "scale_type": 3,
+                        "record_mode": 5,
+                        "different_audio": true,
+                        "audio_track": 3,
+                        "target_usage": "TU3",
+                        "replay_buffer": true,
+                        "replay_hotkeys": {
+                            "ReplayBuffer.Save": [
+                                {
+                                    "key": "OBS_KEY_T"
+                                }
+                            ]
+                        },
+                        "scale": false,
+                        "resolution": "0x0",
+                        "path": "D:/素·材/游戏画面",
+                        "filename_formatting": "游戏-%CCYY-%MM-%DD %hh-%mm-%ss",
+                        "rec_format": "mp4",
+                        "encoder": "obs_nvenc_h264_tex",
+                        "bitrate": 30000,
+                        "keyint_sec": 0,
+                        "rate_control": "CBR",
+                        "multipass": "fullres",
+                        "audio_bitrate": 320,
+                        "replay_duration": 20
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "组件",
+            "uuid": "4634e95f-c01a-496f-8bf8-db51f9e209c4",
+            "id": "group",
+            "versioned_id": "group",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": true,
+                "cx": 2595,
+                "cy": 1914,
+                "items": [
+                    {
+                        "name": "Input-OverPlay-按键显示-鼠标",
+                        "source_uuid": "9d75336b-5b91-431a-ab99-d2e243fda9bf",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 11,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 2286.57080078125,
+                            "y": 1386.134033203125
+                        },
+                        "pos_rel": {
+                            "x": 1.2582136392593384,
+                            "y": 0.73266744613647461
+                        },
+                        "scale": {
+                            "x": 1.0800267457962036,
+                            "y": 1.0800850391387939
+                        },
+                        "scale_rel": {
+                            "x": 1.0807017087936401,
+                            "y": 1.08076012134552
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Input-OverPlay-按键显示-键盘",
+                        "source_uuid": "7a3e79c1-9351-4f44-9895-1f8f0c661f6e",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 12,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1695.940185546875,
+                            "y": 1386.134033203125
+                        },
+                        "pos_rel": {
+                            "x": 0.51992523670196533,
+                            "y": 0.73266744613647461
+                        },
+                        "scale": {
+                            "x": 0.68281024694442749,
+                            "y": 0.68275648355484009
+                        },
+                        "scale_rel": {
+                            "x": 0.68323701620101929,
+                            "y": 0.68318319320678711
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NowPlaying",
+                        "source_uuid": "63782722-1898-4bf0-bacb-61ba142b8783",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 13,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 1450.0938720703125
+                        },
+                        "pos_rel": {
+                            "x": -1.6000000238418579,
+                            "y": 0.81261730194091797
+                        },
+                        "scale": {
+                            "x": 0.77326673269271851,
+                            "y": 0.77285033464431763
+                        },
+                        "scale_rel": {
+                            "x": 0.77375000715255737,
+                            "y": 0.77333337068557739
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "BliveChat-弹幕",
+                        "source_uuid": "2526525e-91f1-4a4d-b380-3a61349051ba",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 14,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 34.978271484375,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5562771558761597,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.4715802669525146,
+                            "y": 1.4707474708557129
+                        },
+                        "scale_rel": {
+                            "x": 1.4724999666213989,
+                            "y": 1.471666693687439
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.show_scene_item.11": [],
+                "libobs.hide_scene_item.11": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": [],
+                "libobs.show_scene_item.13": [],
+                "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.14": [],
+                "libobs.hide_scene_item.14": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        }
+    ],
+    "quick_transitions": [
+        {
+            "name": "直接切换",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 1,
+            "fade_to_black": false
+        },
+        {
+            "name": "淡入淡出",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 2,
+            "fade_to_black": false
+        },
+        {
+            "name": "淡入淡出",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 3,
+            "fade_to_black": true
+        }
+    ],
+    "transitions": [],
+    "saved_projectors": [],
+    "current_transition": "淡入淡出",
+    "transition_duration": 300,
+    "preview_locked": true,
+    "scaling_enabled": false,
+    "scaling_level": 0,
+    "scaling_off_x": 0.0,
+    "scaling_off_y": 0.0,
+    "virtual-camera": {
+        "type2": 3
+    },
+    "modules": {
+        "scripts-tool": [
+            {
+                "path": "D:/System/文档/GitHub/-/Obs/Scripts/autostarter.lua",
+                "settings": {
+                    "execPaths": [
+                        {
+                            "value": "D:/Now Playing/Now Playing.exe",
+                            "uuid": "2cee06a9-e908-40a8-abbf-9f25cf26bf93",
+                            "selected": false,
+                            "hidden": false
+                        },
+                        {
+                            "value": "D:/BLC/Blivechat.exe",
+                            "uuid": "c86cabcc-97b9-4a25-80fc-a258ab5963a7",
+                            "selected": false,
+                            "hidden": false
+                        }
+                    ],
+                    "boolAutoquit": true,
+                    "boolIsEnabled": true
+                }
+            }
+        ],
+        "output-timer": {
+            "streamTimerHours": 0,
+            "streamTimerMinutes": 0,
+            "streamTimerSeconds": 30,
+            "recordTimerHours": 0,
+            "recordTimerMinutes": 0,
+            "recordTimerSeconds": 30,
+            "autoStartStreamTimer": false,
+            "autoStartRecordTimer": false,
+            "pauseRecordTimer": true
+        },
+        "auto-scene-switcher": {
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": false,
+            "active": false,
+            "switches": []
+        },
+        "captions": {
+            "source": "",
+            "enabled": false,
+            "lang_id": 2052,
+            "provider": "mssapi"
+        }
+    },
+    "resolution": {
+        "x": 2560,
+        "y": 1600
+    },
+    "version": 2,
+    "sources": [
+        {
+            "prev_ver": 520093698,
+            "name": "游戏画面-坦克",
+            "uuid": "bfa70e02-3f27-47c7-8b64-c5a0e47351ac",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 15,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Tanki-国服-Google-音频",
+                        "source_uuid": "26c8bbfc-6ba4-48aa-801e-0154479c05a3",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 0.2998046875,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5996252298355103,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "BackgroundMusic-Spotify",
+                        "source_uuid": "4f8dd9ad-24f1-4fa5-8c8d-a04b4b54a723",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 0.2998046875,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5996252298355103,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "音频",
+                        "source_uuid": "4574e1d2-ce66-4543-b04f-2f8ea2d7ddb4",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.2998046875,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5996252298355103,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        }
+                    },
+                    {
+                        "name": "Tanki-国服-Google-窗口",
+                        "source_uuid": "870624ac-33cd-42e4-8c6c-0146f4912730",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 0.799560546875,
+                            "y": 0.99932861328125
+                        },
+                        "pos_rel": {
+                            "x": -1.5990005731582642,
+                            "y": -0.99875086545944214
+                        },
+                        "scale": {
+                            "x": 0.99937540292739868,
+                            "y": 0.99937540292739868
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "Tanki-国服-Google-窗口 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "Tanki-国服-Google-窗口 隐藏转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": false
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "遮挡-道具",
+                        "source_uuid": "d0d56cb3-daf0-4308-b058-c05295757692",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 9,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 2020.03759765625,
+                            "y": 1508.057373046875
+                        },
+                        "pos_rel": {
+                            "x": 0.92504698038101196,
+                            "y": 0.88507175445556641
+                        },
+                        "scale": {
+                            "x": 0.10893192142248154,
+                            "y": 0.10919101536273956
+                        },
+                        "scale_rel": {
+                            "x": 0.10900000482797623,
+                            "y": 0.10925925523042679
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-道具 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-道具 隐藏转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": false
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "遮挡-核能手雷",
+                        "source_uuid": "54cc85ee-9414-47c9-8fce-6e13b0ae73bd",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 8,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 235.1529541015625,
+                            "y": 1509.056884765625
+                        },
+                        "pos_rel": {
+                            "x": -1.3060587644577026,
+                            "y": 0.88632106781005859
+                        },
+                        "scale": {
+                            "x": 0.045284204185009003,
+                            "y": 0.045342031866312027
+                        },
+                        "scale_rel": {
+                            "x": 0.045312505215406418,
+                            "y": 0.045370370149612427
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-核能手雷 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "遮挡-核能手雷 隐藏转场动画",
+                            "transition": {
+                                "direction": "left"
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "窗口采集",
+                        "source_uuid": "f4475926-b1b0-45c1-bcd8-8ddede967262",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.799560546875,
+                            "y": 0.99932861328125
+                        },
+                        "pos_rel": {
+                            "x": -1.5990005731582642,
+                            "y": -0.99875086545944214
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "窗口采集 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "窗口采集 隐藏转场动画",
+                            "transition": {
+                                "direction": "left"
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        }
+                    },
+                    {
+                        "name": "Input-OverPlay-按键显示-鼠标",
+                        "source_uuid": "9d75336b-5b91-431a-ab99-d2e243fda9bf",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 11,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 2251.892333984375,
+                            "y": 1145.2845458984375
+                        },
+                        "pos_rel": {
+                            "x": 1.2148654460906982,
+                            "y": 0.43160569667816162
+                        },
+                        "scale": {
+                            "x": 1.0800267457962036,
+                            "y": 1.0800850391387939
+                        },
+                        "scale_rel": {
+                            "x": 1.0807017087936401,
+                            "y": 1.08076012134552
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Input-OverPlay-按键显示-键盘",
+                        "source_uuid": "7a3e79c1-9351-4f44-9895-1f8f0c661f6e",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 12,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 1661.26171875,
+                            "y": 1145.2845458984375
+                        },
+                        "pos_rel": {
+                            "x": 0.47657716274261475,
+                            "y": 0.43160569667816162
+                        },
+                        "scale": {
+                            "x": 0.68281024694442749,
+                            "y": 0.68275648355484009
+                        },
+                        "scale_rel": {
+                            "x": 0.68323701620101929,
+                            "y": 0.68318319320678711
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "NowPlaying",
+                        "source_uuid": "63782722-1898-4bf0-bacb-61ba142b8783",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 13,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": -34.678466796875,
+                            "y": 1209.244384765625
+                        },
+                        "pos_rel": {
+                            "x": -1.6433480978012085,
+                            "y": 0.51155543327331543
+                        },
+                        "scale": {
+                            "x": 0.77326673269271851,
+                            "y": 0.77285033464431763
+                        },
+                        "scale_rel": {
+                            "x": 0.77375000715255737,
+                            "y": 0.77333337068557739
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "BliveChat-弹幕",
+                        "source_uuid": "2526525e-91f1-4a4d-b380-3a61349051ba",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 14,
+                        "group_item_backup": true,
+                        "pos": {
+                            "x": 0.2998046875,
+                            "y": -240.8494873046875
+                        },
+                        "pos_rel": {
+                            "x": -1.5996252298355103,
+                            "y": -1.3010618686676025
+                        },
+                        "scale": {
+                            "x": 1.4715802669525146,
+                            "y": 1.4707474708557129
+                        },
+                        "scale_rel": {
+                            "x": 1.4724999666213989,
+                            "y": 1.471666693687439
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "组件",
+                        "source_uuid": "4634e95f-c01a-496f-8bf8-db51f9e209c4",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 10,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -34.678466796875,
+                            "y": -240.8494873046875
+                        },
+                        "pos_rel": {
+                            "x": -1.6433480978012085,
+                            "y": -1.3010618686676025
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        }
+                    },
+                    {
+                        "name": "调试文本",
+                        "source_uuid": "8abd1095-f130-4ed8-9050-4e92fcba570f",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 2561.0,
+                            "y": 1601.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.5,
+                            "y": 641.5
+                        },
+                        "pos_rel": {
+                            "x": -1.5996252298355103,
+                            "y": -0.19800126552581787
+                        },
+                        "scale": {
+                            "x": 0.90833920240402222,
+                            "y": 0.90958774089813232
+                        },
+                        "scale_rel": {
+                            "x": 0.90890687704086304,
+                            "y": 0.91015625
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "调试文本 显示转场动画",
+                            "transition": {
+                                "direction": "left",
+                                "swipe_in": true
+                            },
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "id": "swipe_transition",
+                            "versioned_id": "swipe_transition",
+                            "name": "调试文本 隐藏转场动画",
+                            "transition": {
+                                "direction": "left"
+                            },
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.10": [],
+                "libobs.hide_scene_item.10": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "调试文本",
+            "uuid": "8abd1095-f130-4ed8-9050-4e92fcba570f",
+            "id": "text_gdiplus",
+            "versioned_id": "text_gdiplus_v3",
+            "settings": {
+                "text": "调试",
+                "chatlog": false,
+                "outline": true,
+                "font": {
+                    "face": "等线",
+                    "style": "Bold",
+                    "size": 256,
+                    "flags": 1
+                },
+                "outline_size": 7,
+                "outline_color": 4278190080
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093698,
+                    "name": "锐化",
+                    "uuid": "64b9b8e4-87f0-4047-bd9b-44fbd1058203",
+                    "id": "sharpness_filter",
+                    "versioned_id": "sharpness_filter_v2",
+                    "settings": {
+                        "sharpness": 0.17999999999999999
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "遮挡-核能手雷",
+            "uuid": "54cc85ee-9414-47c9-8fce-6e13b0ae73bd",
+            "id": "color_source",
+            "versioned_id": "color_source_v3",
+            "settings": {
+                "color": 4278190080,
+                "width": 3200
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "遮挡-道具",
+            "uuid": "d0d56cb3-daf0-4308-b058-c05295757692",
+            "id": "color_source",
+            "versioned_id": "color_source_v3",
+            "settings": {
+                "undo_uuid": "d0d56cb3-daf0-4308-b058-c05295757692",
+                "color": 4278190080,
+                "width": 4000,
+                "height": 450
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "BackgroundMusic-Spotify",
+            "uuid": "4f8dd9ad-24f1-4fa5-8c8d-a04b4b54a723",
+            "id": "wasapi_process_output_capture",
+            "versioned_id": "wasapi_process_output_capture",
+            "settings": {
+                "window": "Feint - Forget Me Not Feat. CoMa:Chrome_WidgetWin_1:Spotify.exe",
+                "priority": 2
+            },
+            "mixers": 193,
+            "sync": 0,
+            "flags": 0,
+            "volume": 4.7315125465393066,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "BliveChat-弹幕",
+            "uuid": "2526525e-91f1-4a4d-b380-3a61349051ba",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "file:///D:/BLC/data/loader.html?url=http%3A%2F%2Flocalhost%3A12450%2Froom%2FC9O8PDDFYNSW4%3FroomKeyType%3D2%26blockKeywords%3D%25E6%259D%25A8%25E5%25AE%2589%25E9%2580%25B8%26blockUsers%3D%25E6%259D%25A8%25E5%25AE%2589%25E9%2580%25B8300kg%26showDebugMessages%3Dtrue%26lang%3Dzh",
+                "width": 400,
+                "height": 600,
+                "css": "@import url(\"https://fonts.googleapis.com/css?family=Changa%20One\");\n@import url(\"https://fonts.googleapis.com/css?family=Imprima\");\n\n/* Transparent background */\nyt-live-chat-renderer {\n  background-color: transparent !important;\n}\n\nyt-live-chat-ticker-renderer {\n  background-color: transparent !important;\n  box-shadow: none !important;\n}\n\nyt-live-chat-author-chip #author-name {\n  background-color: transparent !important;\n}\n\n/* Hide scrollbar */\nyt-live-chat-item-list-renderer #items {\n  overflow: hidden !important;\n}\n\nyt-live-chat-item-list-renderer #item-scroller {\n  overflow: hidden !important;\n}\n\nyt-live-chat-text-message-renderer #content,\nyt-live-chat-membership-item-renderer #content {\n  overflow: visible !important;\n}\n\n/* Hide header and input */\nyt-live-chat-header-renderer,\nyt-live-chat-message-input-renderer {\n  display: none !important;\n}\n\n/* Hide unimportant messages */\nyt-live-chat-text-message-renderer[is-deleted],\nyt-live-chat-membership-item-renderer[is-deleted] {\n  display: none !important;\n}\n\nyt-live-chat-mode-change-message-renderer, \nyt-live-chat-viewer-engagement-message-renderer, \nyt-live-chat-restricted-participation-renderer {\n  display: none !important;\n}\n\nyt-live-chat-text-message-renderer a,\nyt-live-chat-membership-item-renderer a {\n  text-decoration: none !important;\n}\n\n/* Reduce side padding */\nyt-live-chat-text-message-renderer {\n  padding-left: 4px !important;\n  padding-right: 4px !important;\n}\n\n/* Outlines */\nyt-live-chat-renderer * {\n  text-shadow: -2px -2px #000000, -2px -1px #000000, -2px 0px #000000, -2px 1px #000000, -2px 2px #000000, -1px -2px #000000, -1px -1px #000000, -1px 0px #000000, -1px 1px #000000, -1px 2px #000000, 0px -2px #000000, 0px -1px #000000, 0px 0px #000000, 0px 1px #000000, 0px 2px #000000, 1px -2px #000000, 1px -1px #000000, 1px 0px #000000, 1px 1px #000000, 1px 2px #000000, 2px -2px #000000, 2px -1px #000000, 2px 0px #000000, 2px 1px #000000, 2px 2px #000000;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 18px !important;\n  line-height: 18px !important;\n}\n\n/* Avatars */\nyt-live-chat-text-message-renderer #author-photo,\nyt-live-chat-text-message-renderer #author-photo img,\nyt-live-chat-paid-message-renderer #author-photo,\nyt-live-chat-paid-message-renderer #author-photo img,\nyt-live-chat-membership-item-renderer #author-photo,\nyt-live-chat-membership-item-renderer #author-photo img {\n  \n  width: 24px !important;\n  height: 24px !important;\n  border-radius: 24px !important;\n  margin-right: 6px !important;\n}\n\n/* Channel names */\nyt-live-chat-text-message-renderer #author-name[type=\"owner\"],\nyt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=\"owner\"] {\n  color: #ffd600 !important;\n}\n\nyt-live-chat-text-message-renderer #author-name[type=\"moderator\"],\nyt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=\"moderator\"] {\n  color: #5e84f1 !important;\n}\n\nyt-live-chat-text-message-renderer #author-name[type=\"member\"],\nyt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type=\"member\"] {\n  color: #0f9d58 !important;\n}\n\nyt-live-chat-text-message-renderer #author-name {\n  \n  color: #cccccc !important;\n  font-family: \"Changa One\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 20px !important;\n  line-height: 20px !important;\n}\n\n/* Show colon */\nyt-live-chat-text-message-renderer #author-name::after {\n  content: \":\";\n  margin-left: 2px;\n}\n\n/* Hide badges */\nyt-live-chat-text-message-renderer #chat-badges {\n  \n  vertical-align: text-top !important;\n}\n\n/* Messages */\nyt-live-chat-text-message-renderer #message,\nyt-live-chat-text-message-renderer #message * {\n  color: #ffffff !important;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 18px !important;\n  line-height: 18px !important;\n}\n\nyt-live-chat-text-message-renderer #message {\n  display: block !important;\n  overflow: visible !important;\n}\n\nyt-live-chat-text-message-renderer #message .emoji {\n  width: auto !important;\n  height: 18px !important;\n}\n\nyt-live-chat-text-message-renderer #message .emoji.blc-large-emoji {\n  height: 36px !important;\n}\n\n/* Timestamps */\nyt-live-chat-text-message-renderer #timestamp {\n  display: inline !important;\n  color: #999999 !important;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 16px !important;\n  line-height: 16px !important;\n}\n\n/* Background colors */\nbody {\n  overflow: hidden;\n  background-color: rgba(0, 0, 0, 0);\n}\n\nyt-live-chat-text-message-renderer,\nyt-live-chat-text-message-renderer[is-highlighted] {\n  background-color: rgba(204, 204, 204, 0) !important;\n}\n\nyt-live-chat-text-message-renderer[author-type=\"owner\"],\nyt-live-chat-text-message-renderer[author-type=\"owner\"][is-highlighted] {\n  background-color: rgba(255, 214, 0, 0) !important;\n}\n\nyt-live-chat-text-message-renderer[author-type=\"moderator\"],\nyt-live-chat-text-message-renderer[author-type=\"moderator\"][is-highlighted] {\n  background-color: rgba(94, 132, 241, 0) !important;\n}\n\nyt-live-chat-text-message-renderer[author-type=\"member\"],\nyt-live-chat-text-message-renderer[author-type=\"member\"][is-highlighted] {\n  background-color: rgba(15, 157, 88, 0) !important;\n}\n\n/* SuperChat/Fan Funding Messages */\nyt-live-chat-paid-message-renderer {\n  margin: 4px 0 !important;\n}\n\nyt-live-chat-paid-message-renderer #author-name,\nyt-live-chat-paid-message-renderer #author-name *,\nyt-live-chat-membership-item-renderer #header-content-inner-column,\nyt-live-chat-membership-item-renderer #header-content-inner-column * {\n  color: #ffffff !important;\n  font-family: \"Changa One\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 20px !important;\n  line-height: 20px !important;\n}\n\nyt-live-chat-paid-message-renderer #purchase-amount,\nyt-live-chat-paid-message-renderer #purchase-amount *,\nyt-live-chat-membership-item-renderer #header-subtext,\nyt-live-chat-membership-item-renderer #header-subtext * {\n  color: #ffffff !important;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 18px !important;\n  line-height: 18px !important;\n}\n\nyt-live-chat-paid-message-renderer #content,\nyt-live-chat-paid-message-renderer #content * {\n  color: #ffffff !important;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n  font-size: 18px !important;\n  line-height: 18px !important;\n}\n\nyt-live-chat-membership-item-renderer #card,\nyt-live-chat-membership-item-renderer #header {\n  background-color: #0f9d58 !important;\n  margin: 4px 0 !important;\n}\n\nyt-live-chat-ticker-renderer {\n  display: none !important;\n}\n\n/* SuperChat Ticker */\nyt-live-chat-ticker-paid-message-item-renderer,\nyt-live-chat-ticker-paid-message-item-renderer *,\nyt-live-chat-ticker-sponsor-item-renderer,\nyt-live-chat-ticker-sponsor-item-renderer * {\n  color: #ffffff !important;\n  font-family: \"Imprima\", \"Helvetica Neue\", Helvetica, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"\\5FAE \\8F6F \\96C5 \\9ED1 \", SimHei, Arial, sans-serif;\n}\n\n\n\n/* Animation */\n@keyframes anim {\n  0% { opacity: 0; transform: translateX(-16px); }\n  100% { opacity: 1; transform: none; }\n}\n\nyt-live-chat-text-message-renderer,\nyt-live-chat-membership-item-renderer,\nyt-live-chat-paid-message-renderer {\n  animation: anim 200ms;\n  animation-fill-mode: both;\n}\n",
+                "shutdown": true,
+                "fps_custom": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093698,
+                    "name": "锐化",
+                    "uuid": "1b97de59-5b5d-4646-81c9-38a812448044",
+                    "id": "sharpness_filter",
+                    "versioned_id": "sharpness_filter_v2",
+                    "settings": {
+                        "sharpness": 0.34000000000000002
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "Input-OverPlay-按键显示-键盘",
+            "uuid": "7a3e79c1-9351-4f44-9895-1f8f0c661f6e",
+            "id": "input-overlay",
+            "versioned_id": "input-overlay",
+            "settings": {
+                "io.input_source": "这台电脑",
+                "io.overlay_image": "D:/System/文档/GitHub/-/Obs/input-overlay-5.0.5-presets/wasd-extended-numeric/wasd-extended-numeric.png",
+                "io.layout_file": "D:/System/文档/GitHub/-/Obs/input-overlay-5.0.5-presets/wasd-extended-numeric/wasd-extended-numeric.json"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "Input-OverPlay-按键显示-鼠标",
+            "uuid": "9d75336b-5b91-431a-ab99-d2e243fda9bf",
+            "id": "input-overlay",
+            "versioned_id": "input-overlay",
+            "settings": {
+                "io.input_source": "这台电脑",
+                "io.overlay_image": "D:/System/文档/GitHub/-/Obs/input-overlay-5.0.5-presets/mouse/mouse.png",
+                "io.layout_file": "D:/System/文档/GitHub/-/Obs/input-overlay-5.0.5-presets/mouse/mouse-arrow.json",
+                "io.monitor_use_center": true,
+                "io.monitor_h_center": 1280,
+                "io.monitor_v_center": 770,
+                "io.mouse_sens": 1,
+                "io.mouse_deadzone": 0
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "NowPlaying",
+            "uuid": "63782722-1898-4bf0-bacb-61ba142b8783",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "undo_uuid": "63782722-1898-4bf0-bacb-61ba142b8783",
+                "url": "http://localhost:9863/widget",
+                "shutdown": true,
+                "restart_when_active": true,
+                "fps_custom": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "Tanki-国服-Google-窗口",
+            "uuid": "870624ac-33cd-42e4-8c6c-0146f4912730",
+            "id": "window_capture",
+            "versioned_id": "window_capture",
+            "settings": {
+                "window": "3D坦克 - Google Chrome:Chrome_WidgetWin_1:chrome.exe",
+                "priority": 2,
+                "method": 2
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093698,
+            "name": "Tanki-国服-Google-音频",
+            "uuid": "26c8bbfc-6ba4-48aa-801e-0154479c05a3",
+            "id": "wasapi_process_output_capture",
+            "versioned_id": "wasapi_process_output_capture",
+            "settings": {
+                "window": "3D坦克 - Google Chrome:Chrome_WidgetWin_1:chrome.exe",
+                "priority": 2
+            },
+            "mixers": 199,
+            "sync": 0,
+            "flags": 0,
+            "volume": 2.818382740020752,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        }
+    ]
+}
