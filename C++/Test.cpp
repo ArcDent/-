@@ -2,28 +2,32 @@
 
 int main()
 {
-   int N;
-   scanf("%d",&N);
-   if (N<0||N>=10000)
+   int Target,Reverse;
+   scanf("%d",&Target);
+   int n,i,j = 0;
+   n = Target;
+   while(1)
    {
-    printf("N is out of range\n");
+      if(n/10 != 0)
+      {
+         i = n%10;
+         j = j*10 + i;
+      }
+      else
+      {
+         Reverse = j;
+         break;
+      }
    }
-   else if (N>=0&&N<=9)
+   if(Target == Reverse)
    {
-    printf("1\n");
-   }
-   else if (N>=10&&N<=99)
-   {
-    printf("2\n");
-   }
-   else if (N>=100&&N<=999)
-   {
-    printf("3\n");
+      printf("%d 是回文数",Target);
    }
    else
    {
-    printf("4\n");
+      printf("%d 不是回文数",Target);
    }
+   return 0;
 }
 
 
