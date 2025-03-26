@@ -2,32 +2,24 @@
 
 int main()
 {
-   int Target,Reverse;
-   scanf("%d",&Target);
-   int n,i,j = 0;
-   n = Target;
-   while(1)
+   int Num,Rev,n;
+   scanf("%d",&n);
+   if(n>=10 && n < 100)
    {
-      if(n/10 != 0)
+      for (Num=10;Num<=n;Num++)
       {
-         i = n%10;
-         j = j*10 + i;
+         Rev = Num/10 + (Num%10)*10;
+         if (Num-Rev == 9)
+         {
+            printf("%d\n",Num);
+         }
+         else
+         {
+            continue;
+         }
       }
-      else
-      {
-         Reverse = j;
-         break;
-      }
+      return 0;
    }
-   if(Target == Reverse)
-   {
-      printf("%d 是回文数",Target);
-   }
-   else
-   {
-      printf("%d 不是回文数",Target);
-   }
-   return 0;
 }
 
 
