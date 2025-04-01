@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         3D坦克自制活动模式同步匹配
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.7.0
+// @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/3D坦克自制活动模式同步匹配.user.js
+// @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/3D坦克自制活动模式同步匹配.user.js
 // @description  3D坦克活动模式同步匹配，检测节日模式窗口并支持定时匹配
 // @author       Mod
 // @match        https://3dtank.com/play/*
