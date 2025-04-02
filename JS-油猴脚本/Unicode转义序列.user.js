@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Unicode转义序列输出
 // @namespace    http://tampermonkey.net/
-// @version      1.1.2
+// @version      1.2.0
 // @description  将字符转换为Unicode转义序列并附加控制符标记
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/Unicode转义序列.user.js
@@ -122,6 +122,59 @@
 document.addEventListener("contextmenu", (e) => {
     e.stopImmediatePropagation();
 }, {capture: true})
+
+(function() {
+    'use strict';
+
+    // 主函数：将选择器转换为属性选择器形式
+    function AAA(selector) {
+        // 转换函数
+        const convertToAttributeSelector = (sel) => {
+            // 处理ID选择器
+            sel = sel.replace(/#([a-zA-Z0-9_-]+)/g, '[id="$1"]');
+            
+            // 处理类选择器
+            sel = sel.replace(/\.([a-zA-Z0-9_-]+)/g, '[class*="$1"]');
+            
+            // 处理其他属性选择器（已包含[]的不处理）
+            sel = sel.replace(/\[([^\]]+)\]/g, (match, p1) => {
+                // 如果已经是属性选择器，直接返回
+                if (match.startsWith('[') && match.endsWith(']')) {
+                    return match;
+                }
+                return `[${p1}]`;
+            });
+            
+            return sel;
+        };
+
+        // 生成宽松版本（保留部分原始特性）
+        const generateLooseVersion = (sel) => {
+            // 宽松版本保留标签名和ID，类名改为包含匹配
+            return sel.replace(/#([a-zA-Z0-9_-]+)/g, '[id="$1"]')
+                     .replace(/\.([a-zA-Z0-9_-]+)/g, '[class*="$1"]');
+        };
+
+        // 原始选择器
+        console.log(`原始选择器: ${selector}`);
+        
+        // 严格属性选择器版本
+        const strictVersion = convertToAttributeSelector(selector);
+        console.log(`严格属性选择器: ${strictVersion}`);
+        
+        // 宽松版本
+        const looseVersion = generateLooseVersion(selector);
+        console.log(`宽松但准确的版本: ${looseVersion}`);
+        
+        // 返回严格版本（单行形式）
+        return strictVersion;
+    }
+
+    // 将函数暴露到全局作用域
+    window.AAA = AAA;
+
+    console.log('选择器转换工具已加载，使用AAA("选择器")进行转换');
+})();
 
 
 
