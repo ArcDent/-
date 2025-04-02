@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.6.0
+// @version      1.6.1
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
@@ -852,62 +852,70 @@
 (function() {
     'use strict';
 
-    // ====================== 配置区域开始 ======================
-    // 在这里设置你的目标元素选择器（高亮注释）
-    // 主选择器（高优先级）
-    const PRIMARY_SELECTOR = "#root > div > div[class*='Common-flexStartAlignStart'] > div[class*='MainScreenComponentStyle-containerPanel'] > div[class*='UserInfoContainerStyle-blockLeftPanel'] > div > div[class*='Common-flexStartAlignCenter'] > div[class*='UserInfoContainerStyle-containerProgressMainScreen'] > div:nth-child(1) > span"; // 请替换为你的主选择器
+    // ========== 配置区域开始 ==========
+    // 请在这里修改选择器配置
 
-    // 备选选择器（当主选择器找不到时使用）
-    const FALLBACK_SELECTOR = "#root [class*='UserInfoContainerStyle-containerProgressMainScreen'] > div:first-child > span"; // 请替换为你的备选选择器
-    // ====================== 配置区域结束 ======================
+    // 高亮注释：用于获取标签页标题的元素选择器（优先级A）
+    const TITLE_SELECTOR_A = "#root > div > div[class*='Common-flexStartAlignStart'] > div[class*='MainScreenComponentStyle-containerPanel'] > div[class*='UserInfoContainerStyle-blockLeftPanel'] > div > div[class*='Common-flexStartAlignCenter'] > div[class*='UserInfoContainerStyle-containerProgressMainScreen'] > div:nth-child(1) > span";
 
-    // 观察器配置
-    const OBSERVER_CONFIG = {
-        childList: true,
-        subtree: true,
-        attributes: false,
-        characterData: false
-    };
+    // 高亮注释：用于获取标签页标题的元素选择器（优先级B，当A找不到时使用）
+    const TITLE_SELECTOR_B = "#root [class*='UserInfoContainerStyle-containerProgressMainScreen'] > div:first-child > span";
 
-    // 尝试获取元素的函数
-    function tryGetElement() {
-        // 尝试从主选择器获取
-        let element = findElementInDocument(document, PRIMARY_SELECTOR);
+    // 高亮注释：需要修改内容的元素选择器
+    const MODIFY_ELEMENT_SELECTOR = "head > title";
+    // ========== 配置区域结束 ==========
 
-        // 如果主选择器找不到，尝试备选选择器
-        if (!element) {
-            element = findElementInDocument(document, FALLBACK_SELECTOR);
+    // 主函数
+    function main() {
+        // 查找标题元素
+        const titleElement = findElementWithPriority(TITLE_SELECTOR_A, TITLE_SELECTOR_B);
+
+        // 查找需要修改的元素
+        const modifyElement = findElementInDocumentOrIframes(MODIFY_ELEMENT_SELECTOR);
+
+        if (titleElement) {
+            // 获取标题文本
+            const titleText = getElementText(titleElement);
+
+            // 修改标签页标题
+            document.title = titleText;
+
+            // 如果找到了需要修改的元素，则将其内容设置为标题文本
+            if (modifyElement) {
+                modifyElement.textContent = titleText;
+                console.log(`已将元素 ${MODIFY_ELEMENT_SELECTOR} 的内容修改为: ${titleText}`);
+            }
+
+            console.log(`已将标签页标题修改为: ${titleText}`);
+        } else {
+            console.log('未找到标题元素');
         }
+    }
 
+    // 优先查找选择器A，找不到则查找选择器B
+    function findElementWithPriority(selectorA, selectorB) {
+        // 先在主文档中查找
+        let element = findElementInDocumentOrIframes(selectorA);
+        if (!element && selectorB) {
+            element = findElementInDocumentOrIframes(selectorB);
+        }
         return element;
     }
 
-    // 在文档中查找元素（包括Shadow DOM和iframe）
-    function findElementInDocument(root, selector) {
-        // 尝试在常规DOM中查找
-        let element = root.querySelector(selector);
+    // 在文档和所有iframe中查找元素
+    function findElementInDocumentOrIframes(selector) {
+        // 先在主文档中查找
+        let element = document.querySelector(selector);
         if (element) return element;
 
-        // 查找Shadow DOM
-        const shadowRoots = root.querySelectorAll('*');
-        for (const node of shadowRoots) {
-            if (node.shadowRoot) {
-                element = findElementInDocument(node.shadowRoot, selector);
-                if (element) return element;
-            }
-        }
-
-        // 查找iframe
-        const iframes = root.querySelectorAll('iframe');
-        for (const iframe of iframes) {
+        // 如果没有找到，在所有iframe中查找
+        const iframes = document.getElementsByTagName('iframe');
+        for (let i = 0; i < iframes.length; i++) {
             try {
-                // 尝试访问iframe内容（同源情况下）
-                if (iframe.contentDocument) {
-                    element = findElementInDocument(iframe.contentDocument, selector);
-                    if (element) return element;
-                }
+                const iframeDoc = iframes[i].contentDocument || iframes[i].contentWindow.document;
+                element = iframeDoc.querySelector(selector);
+                if (element) return element;
             } catch (e) {
-                // 跨域iframe会抛出安全错误，忽略
                 console.log('无法访问iframe内容:', e);
             }
         }
@@ -915,58 +923,33 @@
         return null;
     }
 
-    // 更新标题函数
-    function updateTitle() {
-        const element = tryGetElement();
-        if (element) {
-            const newTitle = element.textContent || element.value || element.getAttribute('title') || element.getAttribute('data-title');
-            if (newTitle && newTitle !== document.title) {
-                document.title = newTitle.trim();
-            }
+    // 获取元素的文本内容（兼容各种元素类型）
+    function getElementText(element) {
+        if (element.value !== undefined) {
+            return element.value;
+        } else if (element.textContent) {
+            return element.textContent.trim();
+        } else if (element.innerText) {
+            return element.innerText.trim();
         }
+        return '';
     }
 
-    // 初始化观察器
-    function initObserver() {
-        const observer = new MutationObserver(function(mutations) {
-            updateTitle();
+    // 监听DOM变化，以便在动态内容加载后执行
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+                main();
+            }
         });
+    });
 
-        // 开始观察整个文档
-        observer.observe(document.documentElement, OBSERVER_CONFIG);
+    // 开始观察文档变化
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 
-        // 观察所有Shadow DOM
-        const shadowRoots = document.querySelectorAll('*');
-        for (const node of shadowRoots) {
-            if (node.shadowRoot) {
-                observer.observe(node.shadowRoot, OBSERVER_CONFIG);
-            }
-        }
-
-        return observer;
-    }
-
-    // 主执行函数
-    function main() {
-        // 初始尝试更新标题
-        updateTitle();
-
-        // 设置观察器监听DOM变化
-        const observer = initObserver();
-
-        // 设置定时器作为后备方案（每5秒检查一次）
-        const intervalId = setInterval(updateTitle, 5000);
-
-        // 清理函数
-        return function() {
-            observer.disconnect();
-            clearInterval(intervalId);
-        };
-    }
-
-    // 启动脚本
-    const cleanup = main();
-
-    // 当脚本卸载时清理资源
-    window.addEventListener('unload', cleanup);
+    // 初始执行
+    main();
 })();
