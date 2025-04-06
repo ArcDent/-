@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         安逸￥屏蔽词￥取消记住密码￥绿色特供版
-// @version      1.6.1
+// @version      1.6.2
 // @author       Arc
 // @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
 // @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/屏蔽词/绿色特供屏蔽词.user.js
@@ -849,6 +849,18 @@
 })();
 
 //标签页名称更改为ID（或ID+团标）
+// ==UserScript==
+// @name         动态标签页标题修改器
+// @namespace    ArcDent
+// @version      1.0
+// @description  根据页面元素动态修改标签页标题
+// @updateURL    https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/标签页名称自动更改.user.js
+// @downloadURL  https://gitee.com/ArcDent/Arc/raw/main/JS-油猴脚本/标签页名称自动更改.user.js
+// @author       Arc
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
+
 (function() {
     'use strict';
 
@@ -865,8 +877,14 @@
     const MODIFY_ELEMENT_SELECTOR = "head > title";
     // ========== 配置区域结束 ==========
 
+    // 添加标志变量来跟踪是否已完成第一次更改
+    let hasTitleChanged = false;
+
     // 主函数
     function main() {
+        // 如果已经完成更改，则不再执行
+        if (hasTitleChanged) return;
+
         // 查找标题元素
         const titleElement = findElementWithPriority(TITLE_SELECTOR_A, TITLE_SELECTOR_B);
 
@@ -887,6 +905,12 @@
             }
 
             console.log(`已将标签页标题修改为: ${titleText}`);
+            
+            // 标记为已完成更改
+            hasTitleChanged = true;
+            
+            // 停止观察DOM变化
+            observer.disconnect();
         } else {
             console.log('未找到标题元素');
         }
