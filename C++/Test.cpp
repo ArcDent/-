@@ -2,24 +2,36 @@
 
 int main()
 {
-   int Num,Rev,n;
-   scanf("%d",&n);
-   if(n>=10 && n < 100)
+   int a,b;
+   int n,m;
+   int i = 2;
+   int j = 1;
+   scanf("%d %d", &a, &b);
+   n = a;
+   for(n=a;n<=b;n++)
    {
-      for (Num=10;Num<=n;Num++)
-      {
-         Rev = Num/10 + (Num%10)*10;
-         if (Num-Rev == 9)
+      i = 2;
+      j = 1;
+      m = n;
+      printf("%d=",n);
+      for (i=2;i<=m;i++)
+      {  
+         if (m%i==0 && j==1)
          {
-            printf("%d\n",Num);
+            m = m/i;
+            printf("%d",i);
+            i = 1;
+            j++;
          }
-         else
+         else if (m%i==0 && j>1)
          {
-            continue;
+            m = m/i;
+            printf("*%d",i);
+            i = 1;
+            j++;
          }
       }
-      return 0;
+      printf("\n");
    }
+   return 0;
 }
-
-
