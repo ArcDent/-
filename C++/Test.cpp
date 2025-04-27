@@ -1,37 +1,52 @@
 #include <stdio.h>
 
+int diff(int n,int m,int k);
+
 int main()
 {
-   int a,b;
-   int n,m;
-   int i = 2;
-   int j = 1;
-   scanf("%d %d", &a, &b);
-   n = a;
-   for(n=a;n<=b;n++)
-   {
-      i = 2;
-      j = 1;
-      m = n;
-      printf("%d=",n);
-      for (i=2;i<=m;i++)
-      {  
-         if (m%i==0 && j==1)
-         {
-            m = m/i;
-            printf("%d",i);
-            i = 1;
-            j++;
-         }
-         else if (m%i==0 && j>1)
-         {
-            m = m/i;
-            printf("*%d",i);
-            i = 1;
-            j++;
-         }
-      }
-      printf("\n");
-   }
+   int n,m,k;
+   scanf("%d %d %d",&n,&m,&k);
+   int result = diff(n,m,k);
+   printf("%d\n",result);
    return 0;
+}
+
+int diff(int n,int m,int k)
+{
+   int i,j,a,b,s;
+   s = 0;
+   b = 1;
+   int r;
+   if(n<0)
+   {
+      j = -1;
+      n = -n;
+   }
+   else if (n>0)
+   {
+      j = 1;
+   }
+   else
+   {
+      j = 0;
+   }
+   for (i=n;i>0;i=i/10)
+   {
+      a = i%10;
+      if (a==m)
+      {
+         a = k;
+      }
+      s = s + a*b;
+      b = b*10;
+   }
+   if (j)
+   {
+      r = s*j;
+   }
+   else if (m==0)
+   {
+      r = k;
+   }
+   return r;
 }
