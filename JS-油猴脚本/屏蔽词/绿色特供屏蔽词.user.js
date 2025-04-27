@@ -612,6 +612,7 @@
             target.value = target.value.replace(/\u8111\u7f3a/g, '\u8111‎\u7f3a');
             target.value = target.value.replace(/\u767d\u4e1d/g, '\u767d‎\u4e1d');
             target.value = target.value.replace(/\u4e0a\u95e8/g, '\u4e0a‎\u95e8');
+            target.value = target.value.replace(/\u8fd8\u613f/g, '\u8fd8‎\u613f');
             
             //空格部分
              target.value = target.value.replace(/\u007e/g, '‎');//~转为无间隙空白符号
