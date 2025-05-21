@@ -3,68 +3,56 @@
 
 int main()
 {
-    int score[11]={0,80,70,90,100, 81,95,86,45,78,91};
-    int i=0,j=0,k=0;
-    
+    int N[12]={0};
+    int i,j,m,n;
 
-    int choice[11];
-    choice[0]=0;
-    for(i=1;i<11;i++)
-    {
-        scanf("%d",&choice[i]);
-    }//用choice数组存储选择的课程
+    int a;
+    scanf("%d",&a);
 
-    int num[5];
-    num[0]=0;
-    for(i=1;i<=4;i++)//外循环,i存储课程序号
+    for(i=0;i<a;i++)
     {
-        for(j=1;j<11;j++)//内循环,j存储学生号
+        scanf("%d",&N[i]);
+    }
+
+    int X;
+    scanf("%d",&X);
+
+    for(i=0;i<a;i++)
+    {
+        if(i==0)
         {
-            if(choice[j]==i)
+            if(N[0]>X)
             {
-                num[i]=num[i]+1;
+                m=0;
             }
         }
-    }//num存储选课人数
-
-    int max[5]={0};//存储每门课的最高分
-    int Nmax[5]={0};//存储每门课的最高分学生号
-    for(i=1;i<=4;i++)
-    {
-        if(num[i]==0)
+        else if(i==a-1)
         {
-            ;
-        }
-        else
-        {
-            for(j=1;j<11;j++)
+            if(N[a-1]<X)
             {
-                if(choice[j]==i)
-                {
-                    if(score[j]>max[i])
-                    {
-                        max[i]=score[j];
-                        Nmax[i]=j;
-                    }
-                }
+                m=a;
+            }
+        }
+        else 
+        {
+            if(N[i-1]<=X && N[i]>=X)
+            {
+                m=i;
             }
         }
     }
 
-    for(i=1;i<=4;i++)
+    for(i=a;i>=m;i--)
     {
-        if(num[i]==0)
-        {
-            printf("%d号课程无人报\n",i);
-        }
-        else
-        {
-            printf("%d号课程录取第%d位学生%d分\n",i,Nmax[i],max[i]);
-        }
+        N[i+1]=N[i];
+    }
+
+    N[m]=X;
+
+    for(i=0;i<=a;i++)
+    {
+        printf("%d ",N[i]); 
     }
 
     return 0;
-
-
 }
-   
