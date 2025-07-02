@@ -64,14 +64,14 @@ function mathieu_pendulum_visualization()
                          'String', num2str(default_tmax), ...
                          'Callback', @tmax_text_callback);
     
-    % 初始角度控制
+    % 初始角度控制（单位改为弧度）
     uicontrol(control_panel, 'Style', 'text', 'Position', [20, 100, 150, 20], ...
-              'String', '初始角度 (度):', 'BackgroundColor', [0.9 0.92 0.95]);
+              'String', '初始角度 (rad):', 'BackgroundColor', [0.9 0.92 0.95]);
     theta0_slider = uicontrol(control_panel, 'Style', 'slider', 'Position', [20, 80, 200, 20], ...
-                            'Min', 0, 'Max', 30, 'Value', 5, ...
+                            'Min', 0, 'Max', 0.5, 'Value', 0.0873, ...  % 0.0873 rad ≈ 5°
                             'Callback', @update_plot);
     theta0_text = uicontrol(control_panel, 'Style', 'edit', 'Position', [230, 80, 60, 20], ...
-                          'String', '5', ...
+                          'String', '0.0873', ...
                           'Callback', @theta0_text_callback);
     
     % 创建绘图区域
@@ -169,8 +169,7 @@ function mathieu_pendulum_visualization()
         g = get(g_slider, 'Value');
         l = get(l_slider, 'Value');
         tmax = get(tmax_slider, 'Value');
-        theta0_deg = get(theta0_slider, 'Value');
-        theta0 = deg2rad(theta0_deg);  % 转换为弧度
+        theta0 = get(theta0_slider, 'Value');  % 直接使用弧度值
         
         % 更新文本框
         set(omega_text, 'String', num2str(omega, '%.2f'));
@@ -178,7 +177,7 @@ function mathieu_pendulum_visualization()
         set(g_text, 'String', num2str(g, '%.2f'));
         set(l_text, 'String', num2str(l, '%.2f'));
         set(tmax_text, 'String', num2str(tmax, '%d'));
-        set(theta0_text, 'String', num2str(theta0_deg, '%.1f'));
+        set(theta0_text, 'String', num2str(theta0, '%.4f'));  % 显示4位小数
         
         % 计算Mathieu参数
         a_param = g / l;
@@ -211,7 +210,7 @@ function mathieu_pendulum_visualization()
         cla(ax1);
         cla(ax2);
         
-        % 绘制图形（不再检查稳定解或不稳定解）
+        % 绘制图形
         % θ-t 曲线
         plot(ax1, t, theta, 'LineWidth', 1.8);
         title(ax1, sprintf('角度随时间变化 (ω=%.2f, a₀=%.2f, g=%.2f, l=%.2f)', omega, a0, g, l));
@@ -221,7 +220,7 @@ function mathieu_pendulum_visualization()
         
         % 相图
         plot(ax2, theta, dtheta, 'LineWidth', 1.5);
-        title(ax2, sprintf('相图 (θ vs dθ/dt) - 初始角度: %.1f°', theta0_deg));
+        title(ax2, sprintf('相图 (θ vs dθ/dt) - 初始角度: %.4f rad', theta0));
         xlabel(ax2, '角度 θ (rad)');
         ylabel(ax2, '角速度 dθ/dt (rad/s)');
         grid(ax2, 'on');
